@@ -50,6 +50,7 @@
             flex-grow: 1;
             z-index: 1;
             text-align: center;
+            padding: 20px;
         }
 
         .logo {
@@ -72,11 +73,45 @@
             object-fit: cover; /* Ensures the image fills the frame without distortion */
         }
 
-        h1 {
-            font-size: 4rem;
-            margin: 0;
+        /* Typing effect for Coming Soon */
+        .typing-effect {
+            display: inline-block;
+            overflow: hidden;
+            border-right: .15em solid #333; /* Cursor effect */
+            white-space: nowrap;
+            margin: 0 auto;
+            letter-spacing: .1em;
+            animation: typing 3.5s steps(11) 1s forwards, blink 0.7s step-end infinite, repeatTyping 3.5s steps(11) infinite;
+        }
+
+        @keyframes typing {
+            from {
+                width: 0;
+            }
+            to {
+                width: 9em; /* Adjust width based on text length */
+            }
+        }
+
+        @keyframes blink {
+            50% {
+                border-color: transparent;
+            }
+        }
+
+        @keyframes repeatTyping {
+            0% {
+                width: 0;
+            }
+            100% {
+                width: 9em; /* Adjust width based on text length */
+            }
         }
         
+        h1 {
+                font-size: 4rem;
+            }
+
         h3 {
             font-size: 2rem;
             margin: 10px 0;
@@ -112,6 +147,59 @@
             text-decoration: none;
             font-weight: bold;
         }
+
+        /* Mobile Styles */
+        @media (max-width: 768px) {
+            .logo {
+                width: 120px;
+                height: 120px;
+            }
+
+            h1 {
+                font-size: 3rem;
+            }
+
+            h3 {
+                font-size: 1.5rem;
+            }
+
+            .token-addresses {
+                font-size: 1.2rem;
+            }
+
+            .twitter-link {
+                font-size: 1.2rem;
+            }
+
+            footer {
+                font-size: 0.9rem;
+                padding: 8px 0;
+            }
+        }
+
+        /* Extra Small Mobile Styles */
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            h3 {
+                font-size: 1.3rem;
+            }
+
+            .token-addresses {
+                font-size: 1rem;
+            }
+
+            .twitter-link {
+                font-size: 1rem;
+            }
+
+            footer {
+                font-size: 0.8rem;
+                padding: 6px 0;
+            }
+        }
     </style>
 </head>
 <body>
@@ -121,8 +209,9 @@
             <img src="logo.jpeg" alt="Logo">
         </div>
 
-        <!-- Headings -->
-        <h1>Coming Soon</h1>
+        <!-- Typing Effect Heading -->
+        <h1 class="typing-effect">Coming Soon</h1>
+
         <h3>Quantum-like Memetokenomics on Solana</h3>
 
         <!-- Token Addresses -->
