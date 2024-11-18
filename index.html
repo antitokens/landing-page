@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <!-- Meta Data -->
     <meta charset="UTF-8">
@@ -17,6 +18,9 @@
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
 
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+
     <!-- Styles -->
     <style>
         @font-face {
@@ -25,7 +29,7 @@
             font-weight: normal;
             font-style: normal;
         }
-        
+
         body {
             margin: 0;
             padding: 0;
@@ -42,14 +46,58 @@
             background-size: cover;
         }
 
-        .container {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            flex-grow: 1;
-            z-index: 1;
+        h1 {
+            font-family: 'SF-Mono', monospace;
+            font-weight: bold;
+            color: #333;
+            margin: 10px 0;
             text-align: center;
+            font-size: clamp(2rem, 5vw, 3.5rem); /* Reduced font size */
+        }
+
+        h3 {
+            font-family: 'SF-Mono', monospace;
+            font-weight: normal;
+            color: #555;
+            margin: 5px 0;
+            text-align: center;
+            font-size: clamp(1.8rem, 4vw, 3rem); /* Increased font size */
+            word-wrap: break-word; /* Allow breaking into multiple lines */
+        }
+
+        /* Responsive font sizes using clamp */
+        .responsive-h1 {
+            font-size: clamp(2rem, 5vw, 3rem);
+        }
+
+        .responsive-h3 {
+            font-size: clamp(1.8rem, 4vw, 3.5rem);
+        }
+
+        /* Mobile-Specific Styles for Further Optimization */
+        @media (max-width: 768px) {
+            .responsive-h1 {
+                font-size: clamp(1.8rem, 6vw, 2.5rem);
+            }
+
+            .responsive-h3 {
+                font-size: clamp(1.5rem, 5vw, 2.5rem);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .responsive-h1 {
+                font-size: clamp(1.5rem, 7vw, 2rem);
+            }
+
+            .responsive-h3 {
+                font-size: clamp(1.2rem, 6vw, 2rem);
+            }
+        }
+
+        .container {
+            text-align: center;
+            flex-grow: 1;
             padding: 20px;
         }
 
@@ -57,39 +105,43 @@
             width: 150px;
             height: 150px;
             border-radius: 50%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background-color: #fff; /* Background color inside the frame */
-            border: 5px solid #333; /* Circular frame */
-            margin-bottom: 20px;
-            overflow: hidden; /* Ensures the image stays within the circular frame */
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional shadow for better visual effect */
+            overflow: hidden;
+            margin: 20px;
+            background-color: #fff;
+            border: 5px solid #333;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
 
         .logo img {
             width: 100%;
             height: 100%;
-            object-fit: cover; /* Ensures the image fills the frame without distortion */
+            object-fit: cover;
         }
 
-        /* Typing effect for Coming Soon */
         .typing-effect {
-            display: inline-block;
-            overflow: hidden;
-            border-right: .15em solid #333; /* Cursor effect */
+            font-size: 4rem;
+            letter-spacing: 0.1em;
+            border-right: 2px solid #333;
             white-space: nowrap;
-            margin: 0 auto;
-            letter-spacing: .1em;
-            animation: typing 3.5s steps(11) 1s forwards, blink 0.7s step-end infinite, repeatTyping 3.5s steps(11) infinite;
+            overflow: hidden;
+            display: inline-block;
+            animation: typing 2s steps(30, end), blink 0.5s step-end infinite;
+        }
+
+        .bold-outline {
+            -webkit-text-stroke: 0px #000;
+            -webkit-font-smoothing: antialiased;
+            text-shadow: none;
+            color: black;
         }
 
         @keyframes typing {
             from {
                 width: 0;
             }
+
             to {
-                width: 9em; /* Adjust width based on text length */
+                width: 12ch;
             }
         }
 
@@ -99,23 +151,73 @@
             }
         }
 
-        @keyframes repeatTyping {
-            0% {
-                width: 0;
-            }
-            100% {
-                width: 9em; /* Adjust width based on text length */
-            }
+        .token-section {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin: 30px 0;
         }
-        
-        h1 {
-                font-size: 4rem;
-            }
 
-        h3 {
-            font-size: 2rem;
+        .token-card {
+            background: #ffffff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            padding: 20px;
+            width: 300px;
+            text-align: left;
+            font-size: 1rem;
+        }
+
+        .token-card h4 {
+            font-size: 1.5rem;
+            margin: 0 0 10px;
+        }
+
+        .token-card p {
+            font-size: 1rem;
             margin: 10px 0;
-            letter-spacing: 0.5px;
+        }
+
+        .token-card a {
+            text-decoration: none;
+            color: #0066cc;
+            display: inline-block;
+            margin-right: 10px;
+        }
+
+        .token-card a:hover {
+            text-decoration: underline;
+        }
+
+        .footer-social {
+            width: 100%;
+            background-color: #f8f8f8;
+            padding: 20px 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+            border-top: 1px solid #ddd;
+        }
+
+        .footer-social a {
+            color: #333;
+            text-decoration: none;
+            font-size: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            transition: color 0.3s;
+        }
+
+        .footer-social a:hover {
+            color: #007bff;
+        }
+
+        .footer-social i {
+            font-size: 2rem;
         }
 
         footer {
@@ -125,111 +227,57 @@
             background-color: #e0e0e0;
             font-size: 1rem;
         }
-
-        .token-addresses {
-            font-size: 1.5rem;
-            margin: 10px 0;
-            color: #555;
-        }
-
-        .token-addresses a {
-            color: #0066cc;
-            text-decoration: none;
-        }
-
-        .twitter-link {
-            margin-top: 10px;
-            font-size: 1.5rem;
-        }
-
-        .twitter-link a {
-            color: #1DA1F2;
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-        /* Mobile Styles */
-        @media (max-width: 768px) {
-            .logo {
-                width: 120px;
-                height: 120px;
-            }
-
-            h1 {
-                font-size: 3rem;
-            }
-
-            h3 {
-                font-size: 1.5rem;
-            }
-
-            .token-addresses {
-                font-size: 1.2rem;
-            }
-
-            .twitter-link {
-                font-size: 1.2rem;
-            }
-
-            footer {
-                font-size: 0.9rem;
-                padding: 8px 0;
-            }
-        }
-
-        /* Extra Small Mobile Styles */
-        @media (max-width: 480px) {
-            h1 {
-                font-size: 2.5rem;
-            }
-
-            h3 {
-                font-size: 1.3rem;
-            }
-
-            .token-addresses {
-                font-size: 1rem;
-            }
-
-            .twitter-link {
-                font-size: 1rem;
-            }
-
-            footer {
-                font-size: 0.8rem;
-                padding: 6px 0;
-            }
-        }
     </style>
 </head>
 <body>
     <div class="container">
-        <!-- Circular Framed Logo -->
         <div class="logo">
-            <img src="logo.jpeg" alt="Logo">
+            <img src="logo.jpeg" alt="Antitoken Logo">
         </div>
+        <h1 class="typing-effect responsive-h1">Coming Soon</h1>
+        <h3 class="bold-outline responsive-h3">Entangled Tokenomics</h3>
 
-        <!-- Typing Effect Heading -->
-        <h1 class="typing-effect">Coming Soon</h1>
+        <!-- Token Section -->
+        <div class="token-section">
+            <!-- AntiToken Card -->
+            <div class="token-card">
+                <h4>AntiToken ($ANTI)</h4>
+                <p>Address: <a href="https://pump.fun/coin/HB8KrN7Bb3iLWUPsozp67kS4gxtbA4W5QJX4wKPvpump" target="_blank">HB8Kr...vpump</a></p>
+                <p>Track on:</p>
+                <a href="https://pump.fun/coin/HB8KrN7Bb3iLWUPsozp67kS4gxtbA4W5QJX4wKPvpump" target="_blank">Pump.fun</a>
+                <a href="https://dexscreener.com/solana/h4lq3eam2ae6fukdzhtq5gxprxvh9eh8yxi2ohdmctvv" target="_blank">DexScreener</a>
+                <a href="https://dexsocials.com/solana/HB8KrN7Bb3iLWUPsozp67kS4gxtbA4W5QJX4wKPvpump" target="_blank">DexSocials</a>
+            </div>
 
-        <h3>Quantum-like Memetokenomics on Solana</h3>
-
-        <!-- Token Addresses -->
-        <div class="token-addresses">
-            <p>AntiToken ($ANTI): <a href="https://pump.fun/coin/HB8KrN7Bb3iLWUPsozp67kS4gxtbA4W5QJX4wKPvpump" target="_blank">HB8KrN7Bb3iLWUPsozp67kS4gxtbA4W5QJX4wKPvpump</a></p>
-            <p>ProToken ($PRO): <a href="https://pump.fun/coin/CWFa2nxUMf5d1WwKtG9FS9kjUKGwKXWSjH8hFdWspump" target="_blank">CWFa2nxUMf5d1WwKtG9FS9kjUKGwKXWSjH8hFdWspump</a></p>
-        </div>
-
-        <!-- Twitter Link -->
-        <div class="twitter-link">
-            <p>Follow us on X at <a href="https://x.com/antitokens" target="_blank">@antitokens</a></p>
+            <!-- ProToken Card -->
+            <div class="token-card">
+                <h4>ProToken ($PRO)</h4>
+                <p>Address: <a href="https://pump.fun/coin/CWFa2nxUMf5d1WwKtG9FS9kjUKGwKXWSjH8hFdWspump" target="_blank">CWFa2...spump</a></p>
+                <p>Track on:</p>
+                <a href="https://pump.fun/coin/CWFa2nxUMf5d1WwKtG9FS9kjUKGwKXWSjH8hFdWspump" target="_blank">Pump.fun</a>
+                <a href="https://dexscreener.com/solana/anhxbtygafuxkmbunrsfedzybdyddebnbjgr3hjyrb7r" target="_blank">DexScreener</a>
+                <a href="https://dexsocials.com/solana/CWFa2nxUMf5d1WwKtG9FS9kjUKGwKXWSjH8hFdWspump" target="_blank">DexSocials</a>
+            </div>
         </div>
     </div>
 
-    <!-- Footer -->
+    <!-- Social Media Footer -->
+    <div class="footer-social">
+        <a href="https://x.com/antitokens" target="_blank">
+            <i class="fab fa-twitter"></i>
+            Twitter
+        </a>
+        <a href="https://t.me/antitokengroup" target="_blank">
+            <i class="fab fa-telegram"></i>
+            Telegram
+        </a>
+    </div>
+
+    <!-- Copyright Footer -->
     <footer>
         &copy; 2024 Antitoken. All rights reserved.
     </footer>
 </body>
+
 </html>
 
