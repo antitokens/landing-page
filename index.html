@@ -29,6 +29,13 @@
             font-weight: normal;
             font-style: normal;
         }
+        
+        @font-face {
+            font-family: 'OCR-A-Std';
+            src: url('OCR-A-Std.woff2') format('woff2');
+            font-weight: normal;
+            font-style: normal;
+        }
 
         body {
             margin: 0;
@@ -38,7 +45,7 @@
             justify-content: space-between;
             align-items: center;
             height: 100vh;
-            font-family: 'SF-Mono', monospace;
+            font-family: 'OCR-A-Std', 'SF-Mono', 'Roboto Mono', monospace;
             background-color: #f0f0f0;
             color: #333;
             background: url('data:image/svg+xml;charset=UTF-8,%3Csvg xmlns%3D%22http%3A//www.w3.org/2000/svg%22 viewBox%3D%220 0 800 800%22%3E%3Ccircle cx%3D%22200%22 cy%3D%22200%22 r%3D%22150%22 fill%3D%22rgba(51%2C153%2C255%2C0.1)%22 /%3E%3Ccircle cx%3D%22500%22 cy%3D%22300%22 r%3D%22180%22 fill%3D%22rgba(255%2C51%2C153%2C0.15)%22 /%3E%3Ccircle cx%3D%22350%22 cy%3D%22550%22 r%3D%22100%22 fill%3D%22rgba(255%2C204%2C51%2C0.1)%22 /%3E%3Ccircle cx%3D%22700%22 cy%3D%22700%22 r%3D%22200%22 fill%3D%22rgba(102%2C255%2C102%2C0.15)%22 /%3E%3Ccircle cx%3D%22600%22 cy%3D%22150%22 r%3D%22120%22 fill%3D%22rgba(153%2C51%2C255%2C0.1)%22 /%3E%3C/svg%3E');
@@ -47,7 +54,7 @@
         }
 
         h1 {
-            font-family: 'SF-Mono', monospace;
+            font-family: 'OCR-A-Std', 'SF-Mono', 'Roboto Mono', monospace;
             font-weight: bold;
             color: #333;
             margin: 10px 0;
@@ -56,7 +63,7 @@
         }
 
         h3 {
-            font-family: 'SF-Mono', monospace;
+            font-family: 'OCR-A-Std', 'SF-Mono', 'Roboto Mono', monospace;
             font-weight: normal;
             color: #555;
             margin: 5px 0;
@@ -181,6 +188,7 @@
         }
 
         .token-card a {
+            font-family: 'SF-Mono', 'Roboto Mono', monospace;
             text-decoration: none;
             color: #0066cc;
             display: inline-block;
@@ -221,6 +229,7 @@
         }
 
         footer {
+            font-family: 'SF-Mono', 'Roboto Mono', monospace;
             width: 100%;
             text-align: center;
             padding: 10px 0;
