@@ -124,6 +124,38 @@
             height: 100%;
             object-fit: cover;
         }
+        
+        .counter-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            margin-top: 5px;
+            margin-bottom: 30px;
+        }
+
+        .counter {
+            text-align: center;
+        }
+
+        .counter-timer {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #333;
+            padding: 10px 20px;
+            background: #ffffff;
+            border: 2px solid #333;
+            border-radius: 8px;
+            display: inline-block;
+            width: 300px;
+            text-align: center;
+        }
+
+        .counter-caption {
+            font-size: 1rem;
+            color: #555;
+            margin-top: 10px;
+        }
 
         .typing-effect {
             letter-spacing: 0.1em;
@@ -212,7 +244,7 @@
 
         .footer-social a {
             color: #333;
-            text-decoration: none;
+            text-decoration: none;f
             font-size: 1.5rem;
             display: flex;
             align-items: center;
@@ -238,6 +270,7 @@
         }
     </style>
 </head>
+
 <body>
     <div class="container">
         <div class="logo">
@@ -269,7 +302,19 @@
             </div>
         </div>
     </div>
-
+    
+    <!-- Countdown Section -->
+    <div class="counter-section">
+        <div class="counter">
+          <div id="counter1" class="counter-timer">00:00:00</div>
+          <p class="counter-caption">Time Until Roadmap Release</p>
+        </div>
+        <div class="counter">
+          <div id="counter2" class="counter-timer">00:00:00</div>
+          <p class="counter-caption">Time until Whitepaper Release</p>
+        </div>
+    </div>
+    
     <!-- Social Media Footer -->
     <div class="footer-social">
         <a href="https://x.com/antitokens" target="_blank">
@@ -286,6 +331,40 @@
     <footer>
         &copy; 2024 Antitoken. All rights reserved.
     </footer>
+    
+    <!-- Countdown Timer Script -->
+    <script>
+        // Function to start the countdown to a specific date
+        function startCountdownTo(targetDate, elementId) {
+            const counter = document.getElementById(elementId);
+            const targetTime = new Date(targetDate).getTime();
+
+            function updateTimer() {
+                const now = new Date().getTime();
+                const timeRemaining = targetTime - now;
+
+                if (timeRemaining > 0) {
+                    const days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
+                    const hours = Math.floor((timeRemaining / (1000 * 60 * 60)) % 24);
+                    const minutes = Math.floor((timeRemaining / (1000 * 60)) % 60);
+                    const seconds = Math.floor((timeRemaining / 1000) % 60);
+
+                    counter.textContent = 
+                        `${days}d ${String(hours).padStart(2, '0')}h:${String(minutes).padStart(2, '0')}m:${String(seconds).padStart(2, '0')}s`;
+                } else {
+                    counter.textContent = "Event Started!";
+                    clearInterval(timerInterval); // Stop the timer
+                }
+            }
+
+            updateTimer(); // Initial call to set the time immediately
+            const timerInterval = setInterval(updateTimer, 1000);
+        }
+
+        // Start the countdowns
+        startCountdownTo("2024-11-20T12:00:00+05:30", "counter1"); // November 20, 12 PM IST
+        startCountdownTo("2024-11-22T12:00:00+05:30", "counter2"); // November 22, 12 PM IST
+    </script>
 </body>
 
 </html>
