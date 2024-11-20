@@ -13,7 +13,7 @@
     <title>Antitoken</title>
 
     <!-- Favicon -->
-    <link rel="icon" type="image/png" href="logo.jpeg">
+    <link rel="icon" type="image/png" href="assets/logo.jpeg">
 
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
@@ -25,14 +25,14 @@
     <style>
         @font-face {
             font-family: 'SF-Mono';
-            src: url('SF-Mono.woff2') format('woff2');
+            src: url('assets/SF-Mono.woff2') format('woff2');
             font-weight: normal;
             font-style: normal;
         }
-        
+
         @font-face {
             font-family: 'OCR-A-Std';
-            src: url('OCR-A-Std.woff2') format('woff2');
+            src: url('assets/OCR-A-Std.woff2') format('woff2');
             font-weight: normal;
             font-style: normal;
         }
@@ -59,7 +59,8 @@
             color: #333;
             margin: 10px 0;
             text-align: center;
-            font-size: clamp(2rem, 5vw, 3.5rem); /* Reduced font size */
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            /* Reduced font size */
         }
 
         h3 {
@@ -68,8 +69,10 @@
             color: #555;
             margin: 5px 0;
             text-align: center;
-            font-size: clamp(1.8rem, 4vw, 3rem); /* Increased font size */
-            word-wrap: break-word; /* Allow breaking into multiple lines */
+            font-size: clamp(1.8rem, 4vw, 3rem);
+            /* Increased font size */
+            word-wrap: break-word;
+            /* Allow breaking into multiple lines */
         }
 
         /* Responsive font sizes using clamp */
@@ -124,7 +127,7 @@
             height: 100%;
             object-fit: cover;
         }
-        
+
         .counter-section {
             display: flex;
             flex-direction: column;
@@ -244,7 +247,7 @@
 
         .footer-social a {
             color: #333;
-            text-decoration: none;f
+            text-decoration: none;
             font-size: 1.5rem;
             display: flex;
             align-items: center;
@@ -268,53 +271,95 @@
             background-color: #e0e0e0;
             font-size: 1rem;
         }
+
+        /* Keyframes for the flashing effect */
+        @keyframes flash {
+            0% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 0.3;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+
+        /* Styling the link */
+        .flashing-link {
+            color: #007bff;
+            /* Blue link color */
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.2rem;
+            animation: flash 1s infinite;
+            /* Flashing effect every second */
+        }
+
+        .flashing-link:hover {
+            color: #ff4500;
+            /* Change color on hover */
+        }
     </style>
 </head>
 
 <body>
     <div class="container">
         <div class="logo">
-            <img src="logo.jpeg" alt="Antitoken Logo">
+            <img src="assets/logo.jpeg" alt="Antitoken Logo">
         </div>
-        <h1 class="typing-effect responsive-h1">Coming Soon</h1>
-        <h3 class="bold-outline responsive-h3">Entangled Tokenomics</h3>
+        <h1 class="typing-effect responsive-h1">Antitoken</h1>
+        <h3 class="bold-outline responsive-h3">Entangled Tokenomics for DeSci</h3>
 
         <!-- Token Section -->
         <div class="token-section">
             <!-- AntiToken Card -->
             <div class="token-card">
                 <h4>AntiToken ($ANTI)</h4>
-                <p>Address: <a href="https://pump.fun/coin/HB8KrN7Bb3iLWUPsozp67kS4gxtbA4W5QJX4wKPvpump" target="_blank">HB8Kr...vpump</a></p>
+                <p>Address: <a href="https://pump.fun/coin/HB8KrN7Bb3iLWUPsozp67kS4gxtbA4W5QJX4wKPvpump"
+                        target="_blank">HB8Kr...vpump</a></p>
                 <p>Track on:</p>
-                <a href="https://pump.fun/coin/HB8KrN7Bb3iLWUPsozp67kS4gxtbA4W5QJX4wKPvpump" target="_blank">Pump.fun</a>
-                <a href="https://dexscreener.com/solana/h4lq3eam2ae6fukdzhtq5gxprxvh9eh8yxi2ohdmctvv" target="_blank">DexScreener</a>
-                <a href="https://dexsocials.com/solana/HB8KrN7Bb3iLWUPsozp67kS4gxtbA4W5QJX4wKPvpump" target="_blank">DexSocials</a>
+                <a href="https://pump.fun/coin/HB8KrN7Bb3iLWUPsozp67kS4gxtbA4W5QJX4wKPvpump"
+                    target="_blank">Pump.fun</a>
+                <a href="https://dexscreener.com/solana/h4lq3eam2ae6fukdzhtq5gxprxvh9eh8yxi2ohdmctvv"
+                    target="_blank">DexScreener</a>
+                <a href="https://dexsocials.com/solana/HB8KrN7Bb3iLWUPsozp67kS4gxtbA4W5QJX4wKPvpump"
+                    target="_blank">DexSocials</a>
             </div>
 
             <!-- ProToken Card -->
             <div class="token-card">
                 <h4>ProToken ($PRO)</h4>
-                <p>Address: <a href="https://pump.fun/coin/CWFa2nxUMf5d1WwKtG9FS9kjUKGwKXWSjH8hFdWspump" target="_blank">CWFa2...spump</a></p>
+                <p>Address: <a href="https://pump.fun/coin/CWFa2nxUMf5d1WwKtG9FS9kjUKGwKXWSjH8hFdWspump"
+                        target="_blank">CWFa2...spump</a></p>
                 <p>Track on:</p>
-                <a href="https://pump.fun/coin/CWFa2nxUMf5d1WwKtG9FS9kjUKGwKXWSjH8hFdWspump" target="_blank">Pump.fun</a>
-                <a href="https://dexscreener.com/solana/anhxbtygafuxkmbunrsfedzybdyddebnbjgr3hjyrb7r" target="_blank">DexScreener</a>
-                <a href="https://dexsocials.com/solana/CWFa2nxUMf5d1WwKtG9FS9kjUKGwKXWSjH8hFdWspump" target="_blank">DexSocials</a>
+                <a href="https://pump.fun/coin/CWFa2nxUMf5d1WwKtG9FS9kjUKGwKXWSjH8hFdWspump"
+                    target="_blank">Pump.fun</a>
+                <a href="https://dexscreener.com/solana/anhxbtygafuxkmbunrsfedzybdyddebnbjgr3hjyrb7r"
+                    target="_blank">DexScreener</a>
+                <a href="https://dexsocials.com/solana/CWFa2nxUMf5d1WwKtG9FS9kjUKGwKXWSjH8hFdWspump"
+                    target="_blank">DexSocials</a>
             </div>
         </div>
     </div>
-    
+
     <!-- Countdown Section -->
     <div class="counter-section">
         <div class="counter">
-          <div id="counter1" class="counter-timer">00:00:00</div>
-          <p class="counter-caption">Time Until Roadmap Release</p>
+            <a href="https://antitoken.ss.codes/roadmap" target="_blank" rel="noreferrer" class="flashing-link"
+                style="font-size: 2rem;">
+                See Roadmap
+            </a>
+            <p class="counter-caption">Antitoken Roadmap</p>
         </div>
         <div class="counter">
-          <div id="counter2" class="counter-timer">00:00:00</div>
-          <p class="counter-caption">Time until Whitepaper Release</p>
+            <div id="counter2" class="counter-timer">00:00:00</div>
+            <p class="counter-caption">Time until Whitepaper 1.0 Release</p>
         </div>
     </div>
-    
+
     <!-- Social Media Footer -->
     <div class="footer-social">
         <a href="https://x.com/antitokens" target="_blank">
@@ -331,7 +376,7 @@
     <footer>
         &copy; 2024 Antitoken. All rights reserved.
     </footer>
-    
+
     <!-- Countdown Timer Script -->
     <script>
         // Function to start the countdown to a specific date
@@ -349,7 +394,7 @@
                     const minutes = Math.floor((timeRemaining / (1000 * 60)) % 60);
                     const seconds = Math.floor((timeRemaining / 1000) % 60);
 
-                    counter.textContent = 
+                    counter.textContent =
                         `${days}d ${String(hours).padStart(2, '0')}h:${String(minutes).padStart(2, '0')}m:${String(seconds).padStart(2, '0')}s`;
                 } else {
                     counter.textContent = "Event Started!";
@@ -362,10 +407,9 @@
         }
 
         // Start the countdowns
-        startCountdownTo("2024-11-20T12:00:00+05:30", "counter1"); // November 20, 12 PM IST
+        //startCountdownTo("2024-11-20T12:00:00+05:30", "counter1"); // November 20, 12 PM IST
         startCountdownTo("2024-11-22T12:00:00+05:30", "counter2"); // November 22, 12 PM IST
     </script>
 </body>
 
 </html>
-
