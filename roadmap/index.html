@@ -458,6 +458,36 @@
         #infographic article[data-step="16"] {
             margin-left: -102px;
         }
+        /* Keyframes for the flashing effect */
+        @keyframes flash {
+            0% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 0.3;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+
+        /* Styling the link */
+        .flashing-link {
+            color: #007bff;
+            /* Blue link color */
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.2rem;
+            animation: flash 1s infinite;
+            /* Flashing effect every second */
+        }
+
+        .flashing-link:hover {
+            color: #ff4500;
+            /* Change color on hover */
+        }
     </style>
 </head>
 
@@ -823,8 +853,11 @@
                 <div class="counter-section">
                     <div class="counter">
                         <div class="counter">
-                            <div id="counter2" class="counter-timer">00:00:00</div>
-                            <p class="counter-caption">Time until Whitepaper 1.0 Release</p>
+                            <a href="#" rel="noreferrer" class="flashing-link"
+                                style="font-size: 2rem; color: rgb(255, 101, 101);">
+                                Coming Soon
+                            </a>
+                            <p class="counter-caption">Whitepaper 1.0</p>
                         </div>
                     </div>
                     <!--
