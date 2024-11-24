@@ -3000,24 +3000,64 @@ The <code>$ANTI</code>-<code>$PRO</code> token pair emerged as a bold experiment
 To expand the experiment, a custom AMM-like mechanism called the Catalyst contract will be introduced to bind <code>$ANTI</code> and <code>$PRO</code>, giving rise to two new tokens: Emission (<code>X</code>) and Radiation (<code>Y</code>). Governed by tunable functions <code>WAGMI()</code> and <code>NGMI()</code>, these tokens encapsulate different dynamics: Emission is predictable and derived from the sum (N<sub>ANTI</sub> + N<sub>PRO</sub>), while Radiation is probabilistic and reacts to the difference (N<sub>ANTI</sub> - N<sub>PRO</sub>). This combination of deterministic and indeterministic outputs creates an environment of unique market interactions, where equilibria may form dynamically. The introduction of fluidity and randomness in the Radiation token presents an opportunity to observe how markets respond to unpredictable, yet systematically integrated, behaviors.
 
 While <code>$ANTI</code> and <code>$PRO</code> began as a memetokenomics experiment, their underlying mechanisms hint at significant potential applications, particularly in decentralised science (DeSci). In DeSci, systems frequently encode dualities, such as consistent and inconsistent components in a hypothesis. The Catalyst system could model these through Emission and Radiation tokens, enabling prediction markets for scientific validation or exploration. Beyond DeSci, the <code>$ANTI</code>-<code>$PRO</code> ecosystem has potential applications in DAOs, governance systems, and decentralised financial platforms where opposing yet interconnected forces — such as support vs. dissent or risk vs. reward — can be encoded directly into token mechanics. This whitepaper delves into these use cases and outlines a roadmap for exploring the broader implications of <code>$ANTI</code> and <code>$PRO</code> in decentralised systems.
+<img style="display:block; margin:auto" width="800" src="schema-minimal.png"/>
+<p align="center" style="font-size:16px; font-weight:semibold">Figure 1: Concept</p>
 <h2 id="technology"><strong>Quantum Binding</strong></h2>
-Similar to general principles in quantum mechanics, each <code>$ANTI</code> and <code>$PRO</code> token is quantified by a wave function <code>𝜓<sub>ANTI</sub></code> and <code>𝜓<sub>PRO</sub></code> respectively. The Catalyst operates on these wave functions such that:
+In analogy with fundamental principles in quantum mechanics, the behavior and interactions of <code>$ANTI</code> and <code>$PRO</code> tokens can be modeled using quantum wave functions, denoted as <code>𝜓<sub>ANTI</sub></code> and <code>𝜓<sub>PRO</sub></code> respectively. These wave functions represent the quantised states of the corresponding tokens. The Catalyst, serving as an operator in this quantum-inspired system, governs the transformation and emission of these tokens by acting on their wave functions.
+<br></br>
+The mathematical formalism of these transformations is given by the following forward relations:
 <br></br>
 &nbsp;&nbsp;&nbsp;&nbsp;N<sub>X</sub>𝜓<sub>X</sub> = F(N<sub>ANTI</sub>𝜓<sub>ANTI</sub> + N<sub>PRO</sub>𝜓<sub>PRO</sub>), and
 <br></br>
 &nbsp;&nbsp;&nbsp;&nbsp;N<sub>Y</sub>𝜓<sub>Y</sub> = G(N<sub>ANTI</sub>𝜓<sub>ANTI</sub> - N<sub>PRO</sub>𝜓<sub>PRO</sub>), <span style="color: blue;">(1)</span>
 <br></br>
-to yield the number of released <icode>𝜓<sub>X</sub></code> and <code>𝜓<sub>Y</sub></code> tokens (<code>N<sub>X</sub></code> and <code>N<sub>Y</sub></code> respectively), where <code>F(a)</code> and <code>G(b)</code> are operations on their arguments <code>a</code> and <code>b</code>. <code>F</code> and <code>G</code> operations are tune-able actions on the deposited quanta of tokens and act as a control agent for the Catalyst. The above expression can be inverted to derive the inverse relation such that:
+where <code>N<sub>X</sub></code> and <code>N<sub>Y</sub></code> represent the emitted quantities of <code>$X</code> and <code>$Y</code> tokens, respectively. The <code>F(a)</code> and <code>G(b)</code> denote tunable operations applied to their respective arguments <code>a</code> and <code>b</code>, which encapsulate the combined effects of the deposited wave functions N<sub>ANTI</sub>𝜓<sub>ANTI</sub> and N<sub>PRO</sub>𝜓<sub>PRO</sub>. These operations effectively serve as control mechanisms, enabling the Catalyst to regulate the transformation of deposited tokens into emitted tokens.
 <br></br>
-&nbsp;&nbsp;&nbsp;&nbsp;N<sub>ANTI</sub>𝜓<sub>ANTI</sub> = F<sup>-1</sup>(N<sub>X</sub>𝜓<sub>X</sub>)/2 + G<sup>-1</sup>(N<sub>Y</sub>𝜓<sub>Y</sub>)/2, and
+The inverse relations, which describe the process of depositing <code>$X</code> and <code>$Y</code> tokens to release <code>$ANTI</code> and <code>$PRO</code> tokens, are derived as:
 <br></br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="font-size: 0.75rem;"> </span>N<sub>PRO</sub>𝜓<sub>PRO</sub> = F<sup>-1</sup>(N<sub>X</sub>𝜓<sub>X</sub>)/2 - G<sup>-1</sup>(N<sub>Y</sub>𝜓<sub>Y</sub>)/2. <span style="color: blue;">(2)</span> 
+&nbsp;&nbsp;&nbsp;&nbsp;N<sub>ANTI</sub>𝜓<sub>ANTI</sub> = F<sup>†</sup>(N<sub>X</sub>𝜓<sub>X</sub>)/2 + G<sup>†</sup>(N<sub>Y</sub>𝜓<sub>Y</sub>)/2, and
 <br></br>
-The forward <span style="color: blue;">(1)</span> and inverse <span style="color: blue;">(2)</span> operations to deposit and withdraw tokens are determined by <code>F</code>, <code>G</code>, <code>F<sup>-1</sup></code> and <code>G<sup>-1</sup></code>. The forward operation requires depositing <code>$ANTI</code> and <code>$PRO</code> tokens to emit <code>$X</code> and <code>$Y</code>. The inverse operation requires depositing <code>$X</code> and <code>$Y</code> tokens to emit <code>$ANTI</code> and <code>$PRO</code>. These operations are best visualised in terms of the Feynmann diagram-like schema as shown in Figure 1. 
-<img style="display:block; margin:auto" width="400" src="schema-minimal.png"/>
-<p align="center" style="font-size:16px; font-weight:semibold">Figure 1: Concept</p>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="font-size: 0.75rem;"> </span>N<sub>PRO</sub>𝜓<sub>PRO</sub> = F<sup>†</sup>(N<sub>X</sub>𝜓<sub>X</sub>)/2 - G<sup>†</sup>(N<sub>Y</sub>𝜓<sub>Y</sub>)/2. <span style="color: blue;">(2)</span> 
+<br></br>
+Here, <code>F<sup>†</sup></code> and <code>G<sup>†</sup></code> are the respective inverse operations of <code>F</code> and <code>G</code>, providing a means to reverse the transformation and extract the original <code>$ANTI</code> and <code>$PRO</code> wave functions from the emitted tokens.
+<br></br>
+This duality of forward and inverse operations forms the basis for the Catalyst's functionality, enabling both the emission and recovery of tokens. The forward operation requires the deposition of <code>$ANTI</code> and <code>$PRO</code> tokens to emit <code>$X</code> and <code>$Y</code> tokens, while the inverse operation facilitates the reverse process, where depositing <code>$X</code> and <code>$Y</code> tokens results in the release of <code>$ANTI</code> and <code>$PRO</code> tokens. These operations are inherently interconnected and symmetrically defined by the functions <code>F</code>, <code>G</code>, <code>F<sup>†</sup></code> and <code>G<sup>†</sup></code>.
 
-
+The interplay of these operations is best visualised through a Feynman diagram-like schema, as illustrated in Figure 1. In this representation, the Catalyst is depicted as an interaction vertex where incoming wave functions (tokens) are transformed into outgoing wave functions, encapsulating the quantum-inspired dynamics and control mechanisms governing the token ecosystem.
+<br></br><br></br>
+<img style="display:block; margin:auto" width="800" src="forward-backward.png"/><br></br>
+<p align="center" style="font-size:16px; font-weight:semibold">Figure 2: Forward and Inverse Operations</p>
+<h2 id="technology"><strong>An Example</strong></h2>
+Let’s work through an example of Alice and Bob interacting with the Catalyst. Suppose Alice and Bob deposit <strong>15</strong> <code>$ANTI</code> tokens and <strong>10</strong> <code>$PRO</code> tokens into the Catalyst. The forward operation in the Catalyst is described by:
+<br></br>
+<code>N<sub>X</sub>𝜓<sub>X</sub> = F(N<sub>ANTI</sub>𝜓<sub>ANTI</sub> + N<sub>PRO</sub>𝜓<sub>PRO</sub>)</code>,
+<br></br>
+<code>N<sub>Y</sub>𝜓<sub>Y</sub> = G(N<sub>ANTI</sub>𝜓<sub>ANTI</sub> - N<sub>PRO</sub>𝜓<sub>PRO</sub>)</code>.
+<br></br>
+Here, <code>N<sub>ANTI</sub> = 15</code> and <code>N<sub>PRO</sub> = 10</code>, and <code>F()</code> and <code>G()</code> are operations that control how the deposited tokens transform into <code>N<sub>X</sub>𝜓<sub>X</sub></code> and <code>N<sub>Y</sub>𝜓<sub>Y</sub></code>. In the next step, the deposits are combined:<br></br>
+<code>N<sub>ANTI</sub>𝜓<sub>ANTI</sub> + N<sub>PRO</sub>𝜓<sub>PRO</sub> = 15𝜓<sub>ANTI</sub> + 10𝜓<sub>PRO</sub></code>,
+<br></br>
+<code>N<sub>ANTI</sub>𝜓<sub>ANTI</sub> - N<sub>PRO</sub>𝜓<sub>PRO</sub> = 15𝜓<sub>ANTI</sub> - 10𝜓<sub>PRO</sub></code>.
+<br></br>
+The Catalyst processes these using <code>F()</code> and <code>G()</code>:
+<br></br>
+<code>N<sub>X</sub>𝜓<sub>X</sub> = F(15𝜓<sub>ANTI</sub> + 10𝜓<sub>PRO</sub>)</code>,
+<br></br>
+<code>N<sub>Y</sub>𝜓<sub>Y</sub> = G(15𝜓<sub>ANTI</sub> - 10𝜓<sub>PRO</sub>)</code>.
+<br></br>
+After processing, the outputs are calculated as <code>N<sub>X</sub> = 12</code> and <code>N<sub>Y</sub> = 4</code>, indicating that Alice and Bob receive <strong>12</strong> <code>$X</code> tokens and <strong>4</strong> <code>$Y</code> tokens after processing by the Catalyst's operations.
+<br></br>
+If Alice and Bob decide to reverse the process to recover their original tokens, they deposit the <strong>12</strong> <code>$X</code> tokens and <strong>4</strong> <code>$Y</code> tokens back into the Catalyst. The inverse operations, defined by <code>F<sup>†</sup></code> and <code>G<sup>†</sup></code>, allow the Catalyst to determine the original deposits. By substituting and simplifying, the calculations confirm that the deposited <strong>12</strong> <code>$X</code> tokens and <strong>4</strong> <code>$Y</code> tokens yield <strong>15</strong> <code>$ANTI</code> tokens and <strong>10</strong> <code>$PRO</code> tokens, successfully restoring the initial amounts deposited by Alice and Bob.
+<br></br>
+<blockquote>
+  <p>The true forms of <code>F</code>, <code>G</code>, <code>F<sup>†</sup></code> and <code>G<sup>†</sup></code> are not provided in this paper, and they will only be revealed in the Catalyst contract upon deployment.</p>
+</blockquote>
+<h2 id="technology"><strong>Properties of Catalyst</strong></h2>
+The Catalyst contract contains <code>F</code>, <code>G</code>, <code>F<sup>†</sup></code> and <code>G<sup>†</sup></code>, and these operators vary with each usecase, since each usecase has a unique inherent economy. There are in fact several possible choices of <code>F</code>, <code>G</code>, <code>F<sup>†</sup></code> and <code>G<sup>†</sup></code> in the Catalyst. However, construction of the Catalyst must follow some basic principles of tokenomics such that:
+<br></br>
+1. 
+<br></br>
+2. 
 
 
 
