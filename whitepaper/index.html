@@ -3150,7 +3150,7 @@
       </blockquote>
       <h2 id="technology"><strong>Properties of Collider</strong></h2>
       The Collider contract contains <code>F</code>, <code>G</code>, <code>F<sup>†</sup></code> and
-      <code>G<sup>†</sup></code>, and these operators vary with each usecase, since each usecase has a unique inherent
+      <code>G<sup>†</sup></code>, and these operators vary with each use-case, since each use-case has a unique inherent
       economy. There are in fact several possible choices of <code>F</code>, <code>G</code>, <code>F<sup>†</sup></code>
       and <code>G<sup>†</sup></code> in the Collider. However, construction of the Collider must follow a conservation
       principle:
@@ -3161,7 +3161,7 @@
       <blockquote>
         <p>This part will be expanded once the Collider's exact form in revealed.</p>
       </blockquote>
-      <h2 id="technology"><strong>Domain-specific Usecases</strong></h2>
+      <h2 id="technology"><strong>Domain-specific Use-cases</strong></h2>
       <h3 id="technology"><strong>Prediction Markets</strong></h3>
       Prediction markets are among the simplest applications of entangled tokenomics. The inherent duality in all
       decision-making is encoded in the core topology of <code>$ANTI</code> and <code>$PRO</code> tokenomics. This
@@ -3229,13 +3229,31 @@
         participants.
       </p>
       <h3 id="technology"><strong>Decentralised Science</strong></h3>
-        DeSci is another avenue where the <code>$ANTI</code> and <code>$PRO</code> tokens can be utilised to programmatically fund
-        DeSci projects whose results can be encoded from their raw form to a numerical range with an appropriate mapping. To 
-        understand this, consider an example where... (TBA)
-      <br></br>
+      <p>
+        DeSci (Decentralised Science) is another domain where <code>$ANTI</code> and <code>$PRO</code> tokens can be utilised in various settings. These tokens can be employed to programmatically fund DeSci projects, where project outcomes are encoded from their raw form into a numerical range through appropriate mapping. Alternatively, emitted tokens can serve as a market for citizen science resources, such as distributed computing. Below are two illustrative examples:
+        </p>
+        
+        <h4 id="decision-making"><strong>Funding Scientific Trust</strong></h4>
+        <p>
+        Consider a scenario where Alice is interested in funding a DeSci project that aims to determine the efficacy of a pharmaceutical product, "Drug X." Alice funds the research by depositing <code>$ANTI</code> and <code>$PRO</code> tokens in a proportion she deems appropriate, based on her assessment of the project's likelihood of success. In this case, the Equaliser contract is unnecessary since no outcome-based redistribution in intended; however, alternative methods must exist to ensure the emitted tokens are effectively utilised. The <code>$BARYON</code> tokens (representing Alice's trust in the outcome) are directly used to fund the project on which Alice has voted, while the <code>$PHOTON</code> tokens (representing her uncertainty about the outcome) are released into her personal wallet. Alice can then choose to pool the <code>$PHOTON</code> tokens into the market or retain them. If the project succeeds, the market value of both <code>$BARYON</code> and <code>$PHOTON</code> tokens is likely to increase. Alice can then decide whether to sell her <code>$PHOTON</code> tokens for profit or acquire additional <code>$BARYON</code> tokens from the market to tunnel the duo back into <code>$ANTI</code> and <code>$PRO</code> tokens. The market-making model in this case must be carefully designed to prevent any leakage of monetary value during token dispersion after emission.
+        </p>
+        
+        <h4 id="distributed-resourcing"><strong>Distributed Crowd-sourcing</strong></h4>
+        <p>
+        The application of these tokens in distributed volunteer computing is both significant and intuitive. For instance, Bob has idle devices he wishes to rent out for projects requiring high-throughput parallel computing. Through programmes such as BOINC, Bob can lend his computing resources and earn <code>$BARYON</code> and <code>$PHOTON</code> tokens as rewards. Bob can subsequently tunnel these tokens back into <code>$ANTI</code> and <code>$PRO</code>, or sell them in the local market to others seeking computing resources. Alternatively, if Bob required computing resources himself, he would deposit <code>$ANTI</code> and <code>$PRO</code> tokens in appropriate proportions to emit <code>$BARYON</code> and <code>$PHOTON</code> tokens, which he could then use to purchase compute resources from the local market. In this example, the <code>$BARYON</code> and <code>$PHOTON</code> tokens are degenerate, holding equal value. This straightforward application demonstrates pronounced flexibility in how the tokens can alternate between markets and utilities.
+        </p>
+        <h3 id="distributed-resourcing"><strong>Conclusion</strong></h3>
+        <p>
+        The applications of <code>$ANTI</code> and <code>$PRO</code> tokens in DeSci are vast, although their human interfaces are still under development to ensure completeness and usability. In both examples, it is worth noting that the local market for each use-case is determined by the emitted <code>$BARYON</code> and <code>$PHOTON</code> tokens, while the <code>$ANTI</code> and <code>$PRO</code> tokens remain within a global market independent of specific contexts or use-cases. Detailed technical specifications for the examples provided will be included in the forthcoming yellow paper.
+        </p>
 
+        In conclusion, the <code>$ANTI</code>-<code>$PRO</code> token ecosystem presents a pioneering approach to decentralised market-making, blending deterministic and probabilistic dynamics to address limitations in traditional automated market-making systems. By embedding dualities and leveraging entangled behaviours, the system enables nuanced applications across domains, from prediction markets to decentralised science (DeSci). The introduction of the Collider contract and its transformative operations adds layers of complexity and flexibility, allowing the creation of bespoke markets with features tailored to specific needs.
 
+The use of <code>$BARYON</code> and <code>$PHOTON</code> tokens to encode trust and uncertainty, respectively, highlights the system's adaptability. In DeSci, this translates into streamlined funding models and resource distribution mechanisms, while in prediction markets, the Equaliser ensures proportional reward redistribution based on accuracy. The architecture also mirrors quantum mechanical principles, ensuring completeness and reversibility in token transformations—a key innovation that preserves systemic integrity.
 
+As this experimental tokenomics model matures, its potential applications could extend to other decentralised financial systems, governance frameworks, and resource-sharing networks, fostering innovation in markets that demand both stability and adaptability. While still in development, the system’s human interfaces and technical specifics promise to make this groundbreaking framework more accessible and applicable across a wide array of use cases.
+
+Further details on implementation, along with a deeper exploration of the mathematical foundations, will be presented in the upcoming yellow paper, paving the way for new standards in decentralised economic systems.
 
     </div>
   </div>
