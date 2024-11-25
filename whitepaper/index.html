@@ -3007,6 +3007,9 @@
         <p style="font-size: 1rem;">Terms <code>$X</code>, <code>$Y</code> and 'Catalyst' used in previous drafts have been
         replaced with <code>$BARYON</code>, <code>$PHOTON</code> and 'Collider' respectively.</p>
       </blockquote>
+      <blockquote>
+        <p style="font-size: 1rem;">This is a living document and will be updated in real time to match the development of the actual product.</p>
+      </blockquote>
       <h2 id="mission"><strong>Mission</strong></h2>
       <p><code>$ANTI</code> and <code>$PRO</code> are an experimental entangled token pair designed to explore new
         frontiers in decentralised market-making by introducing a system capable of encoding both predictable and
@@ -3161,6 +3164,9 @@
       <blockquote>
         <p>This part will be expanded once the Collider's exact form in revealed.</p>
       </blockquote>
+      <blockquote>
+        <p>Note that each Collider is a unique contract and each set of emitted <code>$BARYON</code> and <code>$PHOTON</code> tokens are unique; a notation of <code>$BARYON<sub>k</sub></code> and <code>$PHOTON<sub>k</sub></code> is more appropriate.</p>
+    </blockquote>
       <h2 id="technology"><strong>Domain-specific Use-cases</strong></h2>
       <h3 id="technology"><strong>Prediction Markets</strong></h3>
       Prediction markets are among the simplest applications of entangled tokenomics. The inherent duality in all
@@ -3175,7 +3181,7 @@
       <code>$ANTI</code> tokens into the Collider. The Collider processes these inputs through its forward operations,
       which reflect Bob's prediction and uncertainty. The forward transformation combines the deposited tokens, applies
       the operations <code>F</code> and <code>G</code>, and produces outputs defined by these functions, resulting in
-      the emission of <strong>33</strong> <code>$BARYON</code> tokens and <strong>25</strong> <code>$PHOTON</code>
+      the emission of <strong>33</strong> <code>$BARYON</code> tokens and <strong>24</strong> <code>$PHOTON</code>
       tokens. The significance of these token emissions and the subsequent impact of the actual outcome on Bob's
       holdings provide a quantitative demonstration of the Collider's functionality.
       <br></br>
@@ -3192,7 +3198,7 @@
       he incorrectly predicted the direction of the outcome. However, his loss in <code>$PHOTON</code> tokens is
       relatively minor, as his prediction of uncertainty was closer to the actual result.
       <br></br>
-      To reverse the process, Bob can deposit the remaining <strong>12</strong> <code>$BARYON</code> tokens and
+      To reverse the process, Bob can deposit the remaining <strong>8</strong> <code>$BARYON</code> tokens and
       <strong>16</strong> <code>$PHOTON</code> tokens into the Collider. The inverse operations, defined by
       <code>F<sup>†</sup></code> and <code>G<sup>†</sup></code>, calculate the corresponding amounts of original tokens.
       Upon completing the inverse transformation, Bob recovers <strong>35</strong> <code>$PRO</code> tokens and
@@ -3237,15 +3243,17 @@
         
         <h4 id="decision-making"><strong>Funding Scientific Trust</strong></h4>
         <p>
-        Consider a scenario where Alice is interested in funding a DeSci project that aims to determine the efficacy of a pharmaceutical product, "Drug X." Alice funds the research by depositing <code>$ANTI</code> and <code>$PRO</code> tokens in a proportion she deems appropriate, based on her assessment of the project's likelihood of success. In this case, the Equaliser contract is unnecessary since no outcome-based redistribution in intended; however, alternative methods must exist to ensure the emitted tokens are effectively utilised. The <code>$BARYON</code> tokens (representing Alice's trust in the outcome) are directly used to fund the project on which Alice has voted, while the <code>$PHOTON</code> tokens (representing her uncertainty about the outcome) are released into her personal wallet. Alice can then choose to pool the <code>$PHOTON</code> tokens into the market or retain them. If the project succeeds, the market value of both <code>$BARYON</code> and <code>$PHOTON</code> tokens is likely to increase. Alice can then decide whether to sell her <code>$PHOTON</code> tokens for profit or acquire additional <code>$BARYON</code> tokens from the market to tunnel the duo back into <code>$ANTI</code> and <code>$PRO</code> tokens. The market-making model in this case must be carefully designed to prevent any leakage of monetary value during token dispersion after emission.
+        Consider a scenario where Alice is interested in funding a DeSci project that aims to determine the efficacy of a pharmaceutical product, "Drug X." Alice funds the research by depositing <code>$ANTI</code> and <code>$PRO</code> tokens in a proportion she deems appropriate, based on her assessment of the project's likelihood of success. In this case, the Equaliser contract is unnecessary since no outcome-based redistribution in intended; however, alternative methods must exist to ensure the emitted tokens are effectively utilised. The <code>$BARYON</code> tokens (representing Alice's trust in the outcome) are directly used to fund the project on which Alice has voted, while the <code>$PHOTON</code> tokens (representing her uncertainty about the outcome) are released into her personal wallet. Alice can then choose to expose the <code>$PHOTON</code> tokens to the market via selling, lending, staking etc or retain them. If the project succeeds, the market value of both <code>$BARYON</code> and <code>$PHOTON</code> tokens is likely to increase. Alice can then decide whether to sell her <code>$PHOTON</code> tokens for profit or acquire additional <code>$BARYON</code> tokens from the market to tunnel the dual pair back into <code>$ANTI</code> and <code>$PRO</code> tokens. Note that it is also possible for the token prices to decrease upon success due to external influences, such as the internal proceedings - including but not limited to the tokenomics - of the DeSci project in question. The market in that case should nudge Alice toward short selling the token pair (among other options tailored for price decrement); such a decision is up to Alice. The market-making model in this case must be carefully designed to prevent any leakage of monetary value during token dispersion after emission, irrespective of the direction or magnitude of the price movement of the token pair.
         </p>
         <img style="display:block; margin:auto" width="1000" src="desci-funding.png" />
         <p align="center" style="font-size:16px; font-weight:semibold">Figure 4: Funding Decentralised Science</p>
         <h4 id="distributed-resourcing"><strong>Distributed Crowd-sourcing</strong></h4>
         <p>
-        The application of these tokens in distributed volunteer computing is both significant and intuitive. For instance, Bob has idle devices he wishes to rent out for projects requiring high-throughput parallel computing. Through programmes such as BOINC, Bob can lend his computing resources and earn <code>$BARYON</code> and <code>$PHOTON</code> tokens as rewards. Bob can subsequently tunnel these tokens back into <code>$ANTI</code> and <code>$PRO</code>, or sell them in the local market to others seeking computing resources. Alternatively, if Bob required computing resources himself, he would deposit <code>$ANTI</code> and <code>$PRO</code> tokens in appropriate proportions to emit <code>$BARYON</code> and <code>$PHOTON</code> tokens, which he could then use to purchase compute resources from the local market. In this example, the <code>$BARYON</code> and <code>$PHOTON</code> tokens are typically degenerate (although this is a flexible property and can be broken), holding equal value. This straightforward application demonstrates pronounced flexibility in how the tokens can alternate between markets and utilities.
+        The application of these tokens in distributed volunteer computing is both significant and intuitive. For instance, Bob has idle devices he wishes to rent out for projects requiring high-throughput parallel computing. Through programmes such as BOINC, Bob can lend his computing resources and earn <code>$BARYON</code> and <code>$PHOTON</code> tokens as rewards. Bob can subsequently tunnel these tokens back into <code>$ANTI</code> and <code>$PRO</code>, or sell them in the local market to others seeking computing resources. Alternatively, if Bob required computing resources himself, he would deposit <code>$ANTI</code> and <code>$PRO</code> tokens in appropriate proportions to emit <code>$BARYON</code> and <code>$PHOTON</code> tokens, which he could then use to purchase compute resources from the local market. In this example, the <code>$BARYON<sub>k</sub></code> and <code>$PHOTON<sub>k</sub></code> tokens are typically degenerate (although this is a flexible property and can be broken), holding equal value. This straightforward application demonstrates pronounced flexibility in how the tokens can alternate between markets and utilities.
         </p>
-        
+        <blockquote>
+          <p>Local market in this case refers to the <code>$BARYON<sub>k</sub></code> and <code>$PHOTON<sub>k</sub></code> pairs. 'Degenerate' refers to the state where <code>$BARYON<sub>k</sub></code> and <code>$PHOTON<sub>k</sub></code> have indistinguishable properties.</p>
+      </blockquote>
         <p>
         The applications of <code>$ANTI</code> and <code>$PRO</code> tokens in DeSci are vast, although their human interfaces are still under development to ensure completeness and usability. In both examples, it is worth noting that the local market for each use-case is determined by the emitted <code>$BARYON</code> and <code>$PHOTON</code> tokens, while the <code>$ANTI</code> and <code>$PRO</code> tokens remain within a global market independent of specific contexts or use-cases. Detailed technical specifications for the examples provided will be included in the forthcoming yellow paper.
         </p>
@@ -3259,7 +3267,8 @@ The use of <code>$BARYON</code> and <code>$PHOTON</code> tokens to encode trust 
 As this experimental tokenomics model matures, its potential applications could extend to other decentralised financial systems, governance frameworks, and resource-sharing networks, fostering innovation in markets that demand both stability and adaptability. While still in development, the system’s human interfaces and technical specifics promise to make this groundbreaking framework more accessible and applicable across a wide array of use cases.
         <br></br>
 Further details on implementation, along with a deeper exploration of the mathematical foundations, will be presented in the upcoming yellow paper, paving the way for new standards in decentralised economic systems.
-
+        <img style="display:block; margin:auto" width="1000" src="collective.png" />
+        <p align="center" style="font-size:16px; font-weight:semibold">Figure 6: The Antitoken Collective</p>    
     </div>
   </div>
 
