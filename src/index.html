@@ -140,7 +140,7 @@
         </section>
 
         <!-- Benefits Section -->
-        <section id="benefits" class="benefits pt-20">
+        <section id="benefits" class="benefits py-20">
             <h2 class="font-outfit text-3xl font-bold text-center mb-12 bg-gradient-to-r from-accent-primary from-10% via-accent-orange via-45% to-accent-secondary to-90% bg-clip-text text-transparent">
                 Benefits
             </h2>
@@ -187,24 +187,148 @@
             </div>
         </section>
 
-        <!-- Twitter Mentions Section -->
-        <section class="twitter-mentions py-20">
-            <h2 class="font-outfit text-3xl font-bold text-center mb-12 bg-gradient-to-r from-accent-primary from-10% via-accent-orange via-45% to-accent-secondary to-90% bg-clip-text text-transparent">
-                What People Say
-            </h2>
-            <div class="relative">
-                <!-- Gradient overlays -->
-                <div class="absolute left-0 top-0 bottom-0 w-24 bg-gradient-to-r from-dark to-transparent z-10"></div>
-                <div class="absolute right-0 top-0 bottom-0 w-24 bg-gradient-to-l from-dark to-transparent z-10"></div>
+        <!-- Roadmap Section -->
+        <section class="roadmap py-20">
+            <div class="max-w-7xl mx-auto px-4">
+                <h2 class="font-outfit text-3xl font-bold text-center mb-12 bg-gradient-to-r from-accent-primary from-10% via-accent-orange via-45% to-accent-secondary to-90% bg-clip-text text-transparent">
+                    Roadmap
+                </h2>
                 
-                <!-- Marquee container -->
-                <div id="tweet-marquee" class="relative overflow-hidden">
+                <!-- Timeline Container -->
+                <div class="grid grid-cols-[auto,1fr] gap-8">
+                    <!-- Timeline Cards -->
+                    <div class="space-y-8">
+                        <!-- Q4 2024 -->
+                        <div class="timeline-card w-[100px] md:w-[300px] cursor-pointer">
+                            <div class="p-6 bg-dark-card/50 backdrop-blur-xl rounded-xl border border-accent-primary">
+                                <h3 class="text-xl font-bold text-accent-primary">Q4 2024</h3>
+                                <p class="text-gray-400 text-sm">October - December</p>
+                            </div>
+                        </div>
+
+                        <!-- Q1 2025 -->
+                        <div class="timeline-card w-[100px] md:w-[300px] cursor-pointer">
+                            <div class="p-6 bg-dark-card/50 backdrop-blur-xl rounded-xl border border-gray-800/50">
+                                <h3 class="text-xl font-bold text-gray-300">Q1 2025</h3>
+                                <p class="text-gray-400 text-sm">January - March</p>
+                            </div>
+                        </div>
+
+                        <!-- Q2 2025 -->
+                        <div class="timeline-card w-[100px] md:w-[300px] cursor-pointer">
+                            <div class="p-6 bg-dark-card/50 backdrop-blur-xl rounded-xl border border-gray-800/50">
+                                <h3 class="text-xl font-bold text-gray-300">Q2 2025</h3>
+                                <p class="text-gray-400 text-sm">April - June</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Roadmap Content -->
+                    <div class="h-full">
+                        <!-- Q4 2024 Content -->
+                        <div class="timeline-content bg-dark-card/50 backdrop-blur-xl p-6 rounded-xl border border-gray-800/50 h-full">
+                            <ul class="space-y-2">
+                                <li class="flex items-center">
+                                    <div class="w-5 h-5 rounded-full border border-green-500 flex items-center justify-center mr-3">
+                                        <svg class="w-3 h-3 text-green-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                                            <polyline points="20 6 9 17 4 12"></polyline>
+                                        </svg>
+                                    </div>
+                                    <span class="text-gray-300">Whitepaper Release</span>
+                                </li>
+                                <li class="flex items-center">
+                                    <div class="w-5 h-5 rounded-full border border-gray-500 flex items-center justify-center mr-3"></div>
+                                    <span class="text-gray-300">First-ever AMA</span>
+                                </li>
+                                <li class="flex items-center">
+                                    <div class="w-5 h-5 rounded-full border border-gray-500 flex items-center justify-center mr-3"></div>
+                                    <span class="text-gray-300">Dune Analytics Dashboard</span>
+                                </li>
+                                <li class="flex items-center">
+                                    <div class="w-5 h-5 rounded-full border border-gray-500 flex items-center justify-center mr-3"></div>
+                                    <span class="text-gray-300">Discourse Forum</span>
+                                </li>
+                                <li class="flex items-center">
+                                    <div class="w-5 h-5 rounded-full border border-gray-500 flex items-center justify-center mr-3"></div>
+                                    <span class="text-gray-300">Auditing and Turbo-testing of Collider</span>
+                                </li>
+                                <li class="flex items-center">
+                                    <div class="w-5 h-5 rounded-full border border-gray-500 flex items-center justify-center mr-3"></div>
+                                    <span class="text-gray-300">Base-chain Development</span>
+                                </li>
+                                <li class="flex items-center">
+                                    <div class="w-5 h-5 rounded-full border border-gray-500 flex items-center justify-center mr-3"></div>
+                                    <span class="text-gray-300">S-CAT mascot design competition</span>
+                                </li>
+                                <li class="flex items-center">
+                                    <div class="w-5 h-5 rounded-full border border-gray-500 flex items-center justify-center mr-3"></div>
+                                    <span class="text-gray-300">ANTI-PRO-X Wrapper (Tricrypto-Pool)</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Q1 2025 Content -->
+                        <div class="timeline-content bg-dark-card/50 backdrop-blur-xl p-6 rounded-xl border border-gray-800/50 hidden h-full">
+                            <ul class="space-y-2">
+                                <li class="flex items-center">
+                                    <div class="w-5 h-5 rounded-full border border-gray-500 flex items-center justify-center mr-3"></div>
+                                    <span class="text-gray-300">S-CAT AI-Agent</span>
+                                </li>
+                                <li class="flex items-center">
+                                    <div class="w-5 h-5 rounded-full border border-gray-500 flex items-center justify-center mr-3"></div>
+                                    <span class="text-gray-300">Development of Tachyon (Q-Stablecoin)</span>
+                                </li>
+                                <li class="flex items-center">
+                                    <div class="w-5 h-5 rounded-full border border-gray-500 flex items-center justify-center mr-3"></div>
+                                    <span class="text-gray-300">Pilot Collider Program</span>
+                                </li>
+                                <li class="flex items-center">
+                                    <div class="w-5 h-5 rounded-full border border-gray-500 flex items-center justify-center mr-3"></div>
+                                    <span class="text-gray-300">Inhouse Prediction Game</span>
+                                </li>
+                                <li class="flex items-center">
+                                    <div class="w-5 h-5 rounded-full border border-gray-500 flex items-center justify-center mr-3"></div>
+                                    <span class="text-gray-300">Partner with DeSci for mini experiments</span>
+                                </li>
+                                <li class="flex items-center">
+                                    <div class="w-5 h-5 rounded-full border border-gray-500 flex items-center justify-center mr-3"></div>
+                                    <span class="text-gray-300">S-CAT NFT</span>
+                                </li>
+                                <li class="flex items-center">
+                                    <div class="w-5 h-5 rounded-full border border-gray-500 flex items-center justify-center mr-3"></div>
+                                    <span class="text-gray-300">Multichain Collider</span>
+                                </li>
+                                <li class="flex items-center">
+                                    <div class="w-5 h-5 rounded-full border border-gray-500 flex items-center justify-center mr-3"></div>
+                                    <span class="text-gray-300">DAO formation</span>
+                                </li>
+                                <li class="flex items-center">
+                                    <div class="w-5 h-5 rounded-full border border-gray-500 flex items-center justify-center mr-3"></div>
+                                    <span class="text-gray-300">Perps Trading</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Q2 2025 Content -->
+                        <div class="timeline-content bg-dark-card/50 backdrop-blur-xl p-6 rounded-xl border border-gray-800/50 hidden h-full">
+                            <ul class="space-y-2">
+                                <li class="flex items-center">
+                                    <div class="w-5 h-5 rounded-full border border-gray-500 flex items-center justify-center mr-3"></div>
+                                    <span class="text-gray-300">DePIN-Integration</span>
+                                </li>
+                                <li class="flex items-center">
+                                    <div class="w-5 h-5 rounded-full border border-gray-500 flex items-center justify-center mr-3"></div>
+                                    <span class="text-gray-300">Merch and Hardware</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
 
         <!-- FAQ Section -->
-        <section id="faq" class="faq py-20">
+        <section class="faq py-20">
             <h2 class="font-outfit text-3xl font-bold text-center mb-12 bg-gradient-to-r from-accent-primary from-10% via-accent-orange via-45% to-accent-secondary to-90% bg-clip-text text-transparent">
                 FAQs
             </h2>

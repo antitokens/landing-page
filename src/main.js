@@ -238,7 +238,10 @@ function initAccordions() {
 }
 
 function initMarquee() {
-    new InfiniteMarquee('#tweet-marquee');
+    const marqueeContainer = document.getElementById('tweet-marquee');
+    if (marqueeContainer) {  // Only initialize if element exists
+        new InfiniteMarquee('#tweet-marquee');
+    }
 }
 
 function initHero() {
@@ -334,6 +337,40 @@ function initBuyTokensModal() {
     });
 }
 
+function initRoadmapTimeline() {
+    const timelineCards = document.querySelectorAll('.timeline-card');
+    const timelineContents = document.querySelectorAll('.timeline-content');
+
+    // Show first content by default
+    timelineContents[0].classList.remove('hidden');
+
+    timelineCards.forEach((card, index) => {
+        card.addEventListener('click', () => {
+            // Hide all contents
+            timelineContents.forEach(content => {
+                content.classList.add('hidden');
+            });
+
+            // Show selected content
+            timelineContents[index].classList.remove('hidden');
+
+            // Update active card styling
+            timelineCards.forEach(c => {
+                c.querySelector('div').classList.remove('border-accent-primary');
+                c.querySelector('div').classList.add('border-gray-800/50');
+                c.querySelector('h3').classList.remove('text-accent-primary');
+                c.querySelector('h3').classList.add('text-gray-300');
+            });
+
+            // Style active card
+            card.querySelector('div').classList.remove('border-gray-800/50');
+            card.querySelector('div').classList.add('border-accent-primary');
+            card.querySelector('h3').classList.remove('text-gray-300');
+            card.querySelector('h3').classList.add('text-accent-primary');
+        });
+    });
+}
+
 // Initialize when DOM is loaded
 document.addEventListener('DOMContentLoaded', () => {
     initMobileMenu();
@@ -342,4 +379,5 @@ document.addEventListener('DOMContentLoaded', () => {
     initAccordions();
     initMarquee();
     initBuyTokensModal();
+    initRoadmapTimeline();
 });
