@@ -896,6 +896,26 @@
 
     <!-- JS -->
     <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // Select all article headers
+            const headers = document.querySelectorAll("#infographic article header");
+
+            headers.forEach(header => {
+                header.addEventListener("click", function() {
+                    const article = this.parentElement;
+                    
+                    // Toggle the active class
+                    article.classList.toggle("active");
+                    
+                    // Close other articles if needed (optional)
+                    headers.forEach(h => {
+                        if (h !== this && h.parentElement.classList.contains("active")) {
+                            h.parentElement.classList.remove("active");
+                        }
+                    });
+                });
+            });
+        });
         // Function to start the countdown to a specific date
         function startCountdownTo(targetDate, elementId) {
             const counter = document.getElementById(elementId);
