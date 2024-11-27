@@ -11,11 +11,11 @@ export default defineConfig({
         }
     },
     build: {
+        outDir: '../dist',
         rollupOptions: {
             input: {
                 main: 'src/index.html',
-                roadmap: 'src/roadmap.html',
-                whitepaper: 'src/whitepaper.html',
+                whitepaper: 'src/whitepaper/index.html',
             }
         }
     },
