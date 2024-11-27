@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Antitoken - Quantum-inspired Token Pair</title>
+    <script src="main.js" type="module" defer></script>
+    <link rel="icon" type="image/png" href="/assets/favicon/favicon-96x96.png" sizes="96x96" />
+    <link rel="shortcut icon" href="/assets/favicon/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png" />
+    <link rel="manifest" href="/assets/favicon/site.webmanifest" />
+</head>
+<body class="bg-dark text-gray-100 min-h-screen relative overflow-x-hidden font-grotesk">
+    <!-- Stars -->
+    <div class="fixed inset-0 pointer-events-none">
+        <div class="star star-red animate-[float_8s_ease-in-out_infinite]" style="top: 15%; left: 10%;"></div>
+        <div class="star star-green animate-[float_10s_ease-in-out_infinite]" style="top: 25%; left: 20%;"></div>
+        <div class="star star-red animate-[float_12s_ease-in-out_infinite]" style="top: 45%; left: 15%;"></div>
+        <div class="star star-green animate-[float_9s_ease-in-out_infinite]" style="top: 65%; left: 25%;"></div>
+        <div class="star star-red animate-[float_11s_ease-in-out_infinite]" style="top: 85%; left: 10%;"></div>
+        <div class="star star-green animate-[float_13s_ease-in-out_infinite]" style="top: 35%; left: 30%;"></div>
+        <div class="star star-red animate-[float_10s_ease-in-out_infinite]" style="top: 75%; left: 5%;"></div>
+        <div class="star star-green animate-[float_9s_ease-in-out_infinite]" style="top: 95%; left: 15%;"></div>
+        
+        <div class="star star-green animate-[float_10s_ease-in-out_infinite]" style="top: 15%; right: 10%;"></div>
+        <div class="star star-red animate-[float_8s_ease-in-out_infinite]" style="top: 35%; right: 20%;"></div>
+        <div class="star star-green animate-[float_12s_ease-in-out_infinite]" style="top: 55%; right: 15%;"></div>
+        <div class="star star-red animate-[float_9s_ease-in-out_infinite]" style="top: 75%; right: 25%;"></div>
+        <div class="star star-green animate-[float_11s_ease-in-out_infinite]" style="top: 90%; right: 10%;"></div>
+        <div class="star star-red animate-[float_13s_ease-in-out_infinite]" style="top: 25%; right: 30%;"></div>
+        <div class="star star-green animate-[float_10s_ease-in-out_infinite]" style="top: 45%; right: 5%;"></div>
+        <div class="star star-red animate-[float_9s_ease-in-out_infinite]" style="top: 85%; right: 15%;"></div>
+    </div>
+
+    <div class="relative max-w-7xl mx-auto px-4">
+        <!-- Navbar -->
+        <antitoken-navbar></antitoken-navbar>
+
+        <!-- Hero Section -->
+        <section class="min-h-screen pt-24 md:pt-0 flex items-center relative">
+            <div class="grid grid-cols-1 lg:grid-cols-[70%,30%] items-center gap-12">
+                <!-- Main Content -->
+                <div>
+                    <h1 class="font-outfit tracking-tight text-4xl md:text-5xl lg:text-6xl font-semibold mb-12 bg-gradient-to-r from-accent-primary from-10% via-accent-orange via-45% to-accent-secondary to-90% bg-clip-text text-transparent">
+                        Quantum-inspired Token Pair for DeSci & Prediction Markets
+                    </h1>
+                    <p class="font-open font-medium text-xl md:text-[1.35rem] text-gray-300 mb-12 md:mb-24">
+                        Experience the future of entangled token pair market making with 
+                        <span class="text-accent-primary font-semibold">$ANTI</span> 
+                        and 
+                        <span class="text-accent-secondary font-semibold">$PRO</span> 
+                        tokens
+                    </p>
+                    <!-- Stats grid -->
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                        <a href="https://dexscreener.com/solana/HB8KrN7Bb3iLWUPsozp67kS4gxtbA4W5QJX4wKPvpump" 
+                           target="_blank" 
+                           class="group relative backdrop-blur-xl bg-dark-card/50 p-6 rounded-xl border border-gray-800/50 hover:bg-dark-card/90 transition-colors cursor-pointer">
+                            <h3 class="text-gray-400 mb-2"><span class="text-accent-primary/90">$ANTI</span> Price</h3>
+                            <p class="text-2xl font-bold text-accent-primary/90" id="anti-price">$0.00</p>
+                            <span class="tooltip opacity-0 group-hover:opacity-100 transition-opacity absolute -top-12 left-1/2 -translate-x-1/2 px-3 py-2 bg-dark-card/90 backdrop-blur-xl text-sm rounded-lg border border-gray-800/50 whitespace-nowrap">
+                                View on DEXScreener
+                            </span>
+                        </a>
+                        <a href="https://dexscreener.com/solana/HB8KrN7Bb3iLWUPsozp67kS4gxtbA4W5QJX4wKPvpump" 
+                           target="_blank" 
+                           class="group relative backdrop-blur-xl bg-dark-card/50 p-6 rounded-xl border border-gray-800/50 hover:bg-dark-card/90 transition-colors cursor-pointer">
+                            <h3 class="text-gray-400 mb-2"><span class="text-accent-primary/90">$ANTI</span> Market Cap</h3>
+                            <p class="text-2xl font-bold text-accent-primary/90" id="anti-mcap">$0.00</p>
+                            <span class="tooltip opacity-0 group-hover:opacity-100 transition-opacity absolute -top-12 left-1/2 -translate-x-1/2 px-3 py-2 bg-dark-card/90 backdrop-blur-xl text-sm rounded-lg border border-gray-800/50 whitespace-nowrap">
+                                View on DEXScreener
+                            </span>
+                        </a>
+                        <a href="https://dexscreener.com/solana/CWFa2nxUMf5d1WwKtG9FS9kjUKGwKXWSjH8hFdWspump" 
+                           target="_blank" 
+                           class="group relative backdrop-blur-xl bg-dark-card/50 p-6 rounded-xl border border-gray-800/50 hover:bg-dark-card/90 transition-colors cursor-pointer">
+                            <h3 class="text-gray-400 mb-2"><span class="text-accent-secondary/90">$PRO</span> Price</h3>
+                            <p class="text-2xl font-bold text-accent-secondary/90" id="pro-price">$0.00</p>
+                            <span class="tooltip opacity-0 group-hover:opacity-100 transition-opacity absolute -top-12 left-1/2 -translate-x-1/2 px-3 py-2 bg-dark-card/90 backdrop-blur-xl text-sm rounded-lg border border-gray-800/50 whitespace-nowrap">
+                                View on DEXScreener
+                            </span>
+                        </a>
+                        <a href="https://dexscreener.com/solana/CWFa2nxUMf5d1WwKtG9FS9kjUKGwKXWSjH8hFdWspump" 
+                           target="_blank" 
+                           class="group relative backdrop-blur-xl bg-dark-card/50 p-6 rounded-xl border border-gray-800/50 hover:bg-dark-card/90 transition-colors cursor-pointer">
+                            <h3 class="text-gray-400 mb-2"><span class="text-accent-secondary/90">$PRO</span> Market Cap</h3>
+                            <p class="text-2xl font-bold text-accent-secondary/90" id="pro-mcap">$0.00</p>
+                            <span class="tooltip opacity-0 group-hover:opacity-100 transition-opacity absolute -top-12 left-1/2 -translate-x-1/2 px-3 py-2 bg-dark-card/90 backdrop-blur-xl text-sm rounded-lg border border-gray-800/50 whitespace-nowrap">
+                                View on DEXScreener
+                            </span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Logo -->
+                <div class="flex justify-center relative" id="hero-container">
+                    <div class="absolute w-72 h-72 rounded-full bg-gradient-to-r from-accent-primary/20 to-accent-secondary/20 blur-[50px]"></div>
+                    <img 
+                        id="hero-image"
+                        src="/assets/antitoken_logo_large.webp"
+                        alt="Antitoken Logo"
+                        class="w-72 h-72 rounded-full object-cover border-4 border-gray-800/50 relative z-10 transition-transform duration-200 ease-out"
+                    >
+                </div>
+            </div>
+
+            <div id="scroll-indicator" class="cursor-pointer absolute bottom-8 left-1/2 transform -translate-x-1/2 hidden md:flex flex-col items-center animate-bounce">
+                <span class="text-gray-400 text-sm mb-2">Scroll Down</span>
+                <svg 
+                    xmlns="http://www.w3.org/2000/svg" 
+                    class="h-6 w-6 text-accent-primary" 
+                    fill="none" 
+                    viewBox="0 0 24 24" 
+                    stroke="currentColor"
+                >
+                    <path 
+                        stroke-linecap="round" 
+                        stroke-linejoin="round" 
+                        stroke-width="2" 
+                        d="M19 14l-7 7m0 0l-7-7m7 7V3"
+                    />
+                </svg>
+            </div>
+        </section>
+
+        <!-- Benefits Section -->
+        <section id="benefits" class="benefits pt-20">
+            <h2 class="font-outfit text-3xl font-bold text-center mb-12 bg-gradient-to-r from-accent-primary from-10% via-accent-orange via-45% to-accent-secondary to-90% bg-clip-text text-transparent">
+                Benefits
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="p-8 backdrop-blur-xl bg-dark-card/50 rounded-2xl border border-gray-800/50 hover:border-accent-primary/20 transition-colors">
+                    <i class="fas fa-atom text-4xl text-accent-primary mb-4"></i>
+                    <h3 class="text-gray-300 text-xl font-bold mb-4">Quantum-inspired Design</h3>
+                    <p class="text-gray-400">Unique entangled token pair system based on quantum mechanical principles</p>
+                </div>
+                <div class="p-8 backdrop-blur-xl bg-dark-card/50 rounded-2xl border border-gray-800/50 hover:border-accent-primary/20 transition-colors">
+                    <i class="fas fa-chart-line text-4xl text-accent-primary mb-4"></i>
+                    <h3 class="text-gray-300 text-xl font-bold mb-4">Advanced Market Making</h3>
+                    <p class="text-gray-400">Discretised AMM model with paired interaction mechanics</p>
+                </div>
+                <div class="p-8 backdrop-blur-xl bg-dark-card/50 rounded-2xl border border-gray-800/50 hover:border-accent-primary/20 transition-colors">
+                    <i class="fas fa-flask text-4xl text-accent-primary mb-4"></i>
+                    <h3 class="text-gray-300 text-xl font-bold mb-4">DeSci Integration</h3>
+                    <p class="text-gray-400">Perfect for decentralized science funding and prediction markets</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- How it Works Section -->
+        <section class="how-it-works py-20">
+            <h2 class="font-outfit text-3xl font-bold text-center mb-12 bg-gradient-to-r from-accent-primary from-10% via-accent-orange via-45% to-accent-secondary to-90% bg-clip-text text-transparent">
+                How It Works
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="backdrop-blur-xl bg-dark-card/50 p-8 rounded-2xl border border-gray-800/50 hover:border-accent-primary/20 transition-colors">
+                    <div class="step-number text-6xl font-bold text-accent-primary/20 mb-4">01</div>
+                    <h3 class="text-gray-300 text-xl font-bold mb-4">Token Interaction</h3>
+                    <p class="text-gray-400">$ANTI and $PRO tokens interact through the Collider contract</p>
+                </div>
+                <div class="backdrop-blur-xl bg-dark-card/50 p-8 rounded-2xl border border-gray-800/50 hover:border-accent-primary/20 transition-colors">
+                    <div class="step-number text-6xl font-bold text-accent-primary/20 mb-4">02</div>
+                    <h3 class="text-gray-300 text-xl font-bold mb-4">Emission Process</h3>
+                    <p class="text-gray-400">Collider emits $BARYON and $PHOTON tokens based on quantum-like operations</p>
+                </div>
+                <div class="backdrop-blur-xl bg-dark-card/50 p-8 rounded-2xl border border-gray-800/50 hover:border-accent-primary/20 transition-colors">
+                    <div class="step-number text-6xl font-bold text-accent-primary/20 mb-4">03</div>
+                    <h3 class="text-gray-300 text-xl font-bold mb-4">Market Dynamics</h3>
+                    <p class="text-gray-400">Create prediction markets or fund DeSci projects with emitted tokens</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Twitter Mentions Section -->
+        <section class="twitter-mentions py-20">
+            <h2 class="font-outfit text-3xl font-bold text-center mb-12 bg-gradient-to-r from-accent-primary from-10% via-accent-orange via-45% to-accent-secondary to-90% bg-clip-text text-transparent">
+                What People Say
+            </h2>
+            <div class="relative">
+                <!-- Gradient overlays -->
+                <div class="absolute left-0 top-0 bottom-0 w-24 bg-gradient-to-r from-dark to-transparent z-10"></div>
+                <div class="absolute right-0 top-0 bottom-0 w-24 bg-gradient-to-l from-dark to-transparent z-10"></div>
+                
+                <!-- Marquee container -->
+                <div id="tweet-marquee" class="relative overflow-hidden">
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="faq" class="faq py-20">
+            <h2 class="font-outfit text-3xl font-bold text-center mb-12 bg-gradient-to-r from-accent-primary from-10% via-accent-orange via-45% to-accent-secondary to-90% bg-clip-text text-transparent">
+                FAQs
+            </h2>
+            <div class="max-w-3xl mx-auto space-y-6">
+                <div class="backdrop-blur-xl bg-dark-card/50 rounded-xl border border-gray-800/50">
+                  <button class="accordion-header w-full p-6 text-left flex items-center justify-between hover:bg-dark-card/80">
+                    <span class="text-gray-300 text-lg font-semibold">What does "entangled tokenomics" mean?</span>
+                    <svg class="accordion-icon w-6 h-6 transform transition-transform rotate-90" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
+                    <div class="accordion-content px-6 text-gray-300 overflow-hidden transition-all duration-200">
+                        <p class="text-gray-300">Entangled tokenomics refers to a system where the behavior of two tokens, $ANTI and $PRO, is interconnected, akin to quantum entanglement. Their values and interactions are interdependent, ensuring that actions on one token affect the other predictably.</p>
+                    </div>
+                </div>
+
+                <div class="backdrop-blur-xl bg-dark-card/50 rounded-xl border border-gray-800/50">
+                    <button class="accordion-header w-full p-6 text-left flex items-center justify-between hover:bg-dark-card/80">
+                        <span class="text-gray-300 text-lg font-semibold">What are the collider functions, and how do they work?</span>
+                        <svg class="accordion-icon w-6 h-6 transform transition-transform rotate-90" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
+                    <div class="accordion-content px-6 text-gray-300 overflow-hidden transition-all duration-200">
+                        <p class="text-gray-300">Collider functions (\( F \), \( G \), \( F^\dagger \), \( G^\dagger \)) facilitate reversible transformations between $ANTI and $PRO. They integrate deterministic logic with probabilistic factors, ensuring seamless transitions while preserving systemic properties.</p>
+                    </div>
+                </div>
+
+                <div class="backdrop-blur-xl bg-dark-card/50 rounded-xl border border-gray-800/50">
+                    <button class="accordion-header w-full p-6 text-left flex items-center justify-between hover:bg-dark-card/80">
+                        <span class="text-gray-300 text-lg font-semibold">How do these tokens apply to prediction markets and decentralized science (DeSci)?</span>
+                        <svg class="accordion-icon w-6 h-6 transform transition-transform rotate-90" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
+                    <div class="accordion-content px-6 text-gray-300 overflow-hidden transition-all duration-200">
+                        <p class="text-gray-300">In prediction markets, these tokens measure and reward accuracy. For DeSci, they incentivize reproducibility and trust by linking token values to outcomes and community consensus.</p>
+                    </div>
+                </div>
+
+                <div class="backdrop-blur-xl bg-dark-card/50 rounded-xl border border-gray-800/50">
+                    <button class="accordion-header w-full p-6 text-left flex items-center justify-between hover:bg-dark-card/80">
+                        <span class="text-gray-300 text-lg font-semibold">What ensures reversibility in token transformations?</span>
+                        <svg class="accordion-icon w-6 h-6 transform transition-transform rotate-90" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
+                    <div class="accordion-content px-6 text-gray-300 overflow-hidden transition-all duration-200">
+                        <p class="text-gray-300">The system uses carefully designed collider functions to maintain a lossless transformation, avoiding value dissipation. Probabilistic adjustments ensure this property holds even in dynamic markets.</p>
+                    </div>
+                </div>
+
+                <div class="backdrop-blur-xl bg-dark-card/50 rounded-xl border border-gray-800/50">
+                    <button class="accordion-header w-full p-6 text-left flex items-center justify-between hover:bg-dark-card/80">
+                        <span class="text-gray-300 text-lg font-semibold">How do dualities like $BARYON and $PHOTON influence the ecosystem?</span>
+                        <svg class="accordion-icon w-6 h-6 transform transition-transform rotate-90" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
+                    <div class="accordion-content px-6 text-gray-300 overflow-hidden transition-all duration-200">
+                        <p class="text-gray-300">These dualities represent trust and uncertainty, affecting token values. For instance, high trust increases $BARYON values, while unresolved uncertainty impacts $PHOTON dynamics.</p>
+                    </div>
+                </div>
+
+                <div class="backdrop-blur-xl bg-dark-card/50 rounded-xl border border-gray-800/50">
+                    <button class="accordion-header w-full p-6 text-left flex items-center justify-between hover:bg-dark-card/80">
+                        <span class="text-gray-300 text-lg font-semibold">How are users expected to interact with these mechanisms?</span>
+                        <svg class="accordion-icon w-6 h-6 transform transition-transform rotate-90" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
+                    <div class="accordion-content px-6 text-gray-300 overflow-hidden transition-all duration-200">
+                        <p class="text-gray-300">Human interfaces (e.g., dApps) will simplify token interactions, integrating complex mechanisms into intuitive actions like staking, trading, and voting.</p>
+                    </div>
+                </div>
+
+                <div class="backdrop-blur-xl bg-dark-card/50 rounded-xl border border-gray-800/50">
+                    <button class="accordion-header w-full p-6 text-left flex items-center justify-between hover:bg-dark-card/50">
+                        <span class="text-gray-300 text-lg font-semibold">When will detailed technical documentation be available?</span>
+                        <svg class="accordion-icon w-6 h-6 transform transition-transform rotate-90" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
+                    <div class="accordion-content px-6 text-gray-300 overflow-hidden transition-all duration-200">
+                        <p class="text-gray-300">A forthcoming yellow paper will provide a deeper technical explanation, covering mathematical frameworks and practical applications.</p>
+                    </div>
+                </div>
+            </div> 
+
+            <div class="text-center pt-8 border-gray-800/50">
+              <p class="text-gray-400 mb-4">Want to dive deeper into the quantum mechanics of our tokenomics?</p>
+              <a href="/whitepaper/" 
+                 target="_blank" 
+                 class="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-accent-primary hover:opacity-90 transition-opacity">
+                  <span>Read Whitepaper</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                      <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                  </svg>
+              </a>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="cta-section py-20">
+            <div class="backdrop-blur-xl bg-dark-card/50 p-12 rounded-2xl border border-gray-800 text-center">
+                <h2 class="font-outfit text-3xl font-bold mb-6 bg-gradient-to-r from-accent-primary from-10% via-accent-orange via-45% to-accent-secondary to-90% bg-clip-text text-transparent">
+                    Ready to Get Started?
+                </h2>
+                <p class="text-xl text-gray-300 mb-8">Join the future of decentralized markets</p>
+                <button class="buy-tokens-button bg-accent-primary hover:opacity-90 text-white px-8 py-3 rounded-lg text-lg font-semibold">
+                    Buy Tokens
+                </button>
+            </div>
+        </section>
+    </div>
+
+    <antitoken-footer></antitoken-footer>
+    <antitoken-modal></antitoken-modal>
+</body>
+</html>
