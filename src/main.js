@@ -267,22 +267,6 @@ function initHero() {
     setInterval(updateTokenData, 30000);
 }
 
-function initMobileMenu() {
-    const mobileMenuButton = document.getElementById('mobile-menu-button');
-    const mobileMenu = document.getElementById('mobile-menu');
-
-    mobileMenuButton.addEventListener('click', () => {
-        mobileMenu.classList.toggle('hidden');
-    });
-
-    // Close menu when clicking a link
-    mobileMenu.querySelectorAll('a').forEach(link => {
-        link.addEventListener('click', () => {
-            mobileMenu.classList.add('hidden');
-        });
-    });
-}
-
 function initScrollIndicator() {
     const scrollIndicator = document.getElementById('scroll-indicator');
     let lastScrollTop = 0;
@@ -373,7 +357,6 @@ function initRoadmapTimeline() {
 
 // Initialize when DOM is loaded
 document.addEventListener('DOMContentLoaded', () => {
-    initMobileMenu();
     initHero();
     initScrollIndicator();
     initAccordions();
