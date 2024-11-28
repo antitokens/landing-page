@@ -9,7 +9,6 @@
     font-style: normal;
     font-display: swap;
 }
-
 @font-face {
     font-family: 'Outfit';
     src: url('/fonts/Outfit-VariableFont_wght.ttf') format('truetype-variations');
@@ -17,10 +16,15 @@
     font-style: normal;
     font-display: swap;
 }
-
 @font-face {
     font-family: 'OCR A Std';
     src: url('/fonts/OCR-A-Std.woff') format('woff');
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'SF Mono Round';
+    src: url('/fonts/SF-Mono-Round.woff2') format('woff2');
     font-style: normal;
     font-display: swap;
 }
@@ -61,4 +65,9 @@
 
 .animate-marquee:hover {
     animation-play-state: paused;
+}
+
+code {
+    background-color: black !important;
+    color: white !important;
 }

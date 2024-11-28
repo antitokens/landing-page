@@ -14,8 +14,8 @@
     <body class="bg-dark text-gray-100 relative overflow-x-hidden font-grotesk">
         <div class="relative max-w-7xl mx-auto px-4">
             <antitoken-navbar></antitoken-navbar>
-            <article class="mt-40 prose prose-lg prose-invert !max-w-none mb-24">
-                <h1>Entangled Quantum-like Tokenomics for DeSci & Prediction Markets</h1>
+            <article class="mt-40 prose prose-lg prose-invert !max-w-none mb-24 font-sfmono">
+                <h1 class="font-ocr opacity-80 text-4xl">Entangled Quantum-like Tokenomics for DeSci & Prediction Markets</h1>
                 <h5>
                     Author: <a target="_blank" href="https://sshmatrix.ss.codes/"><code>sshmatrix</code></a> | <a target="_blank" href="https://antitoken.pro"><code>Antitoken</code></a> | quant/acc
                 </h5>
@@ -29,7 +29,7 @@
                 <blockquote>
                     <p>This is a living document and will be updated in real time to match the development of the actual product.</p>
                 </blockquote>
-                <h2><strong>Mission</strong></h2>
+                <h2 class="font-ocr"><strong>Mission</strong></h2>
                 <p><code>$ANTI</code> and <code>$PRO</code> are an experimental entangled token pair designed to explore new
                     frontiers in decentralised market-making by introducing a system capable of encoding both predictable and
                     unpredictable outcomes into its tokenomics. This approach challenges traditional continuous AMMs by employing a
@@ -39,7 +39,7 @@
                     uncertainty and dynamic equilibria into their design, these tokens offer a novel framework for creating markets
                     that balance stability with probabilistic behavior, enabling a more nuanced approach to decentralised economies.
                 </p>
-                <h2><strong>Technology</strong></h2>
+                <h2 class="font-ocr"><strong>Technology</strong></h2>
                 The <code>$ANTI</code>-<code>$PRO</code> token pair emerged as a bold experiment in tokenomics, exploring the
                 potential of a system based on entangled market dynamics. Unlike traditional decentralised market-making, which
                 relies on continuous automated market makers (AMMs) in individual pools, <code>$ANTI</code> and <code>$PRO</code>
@@ -69,7 +69,7 @@
                 <br></br>
                 <img width="800" src="/assets/whitepaper/schema-minimal.png" />
                 <p align="center">Figure 1: Concept</p>
-                <h2><strong>Quantum Binding</strong></h2>
+                <h2 class="font-ocr"><strong>Quantum Binding</strong></h2>
                 In analogy with fundamental principles in quantum mechanics, the behavior and interactions of <code>$ANTI</code>
                 and <code>$PRO</code> tokens can be modeled using quantum wave functions, denoted as
                 <code>𝜓<sup>ANTI</sup></code> and <code>𝜓<sup>PRO</sup></code> respectively. These wave functions represent the
@@ -121,7 +121,7 @@
                 <br></br>
                 Forward and inverse operations (1) and (2) can be written in matrix form as follows:
                 <img width="800" src="/assets/whitepaper/matrix-form.png" />
-                <h2><strong>An Example</strong></h2>
+                <h2 class="font-ocr"><strong>An Example</strong></h2>
                 Let’s work through an example of Alice and Bob interacting with the Collider. Suppose Alice and Bob deposit
                 <strong>15</strong> <code>$ANTI</code> tokens and <strong>10</strong> <code>$PRO</code> tokens into the Collider.
                 The forward operation in the Collider is described by:
@@ -165,7 +165,7 @@
                         are not provided in this paper, and they will only be revealed in the Collider contract upon deployment.
                     </p>
                 </blockquote>
-                <h2><strong>Properties of Collider</strong></h2>
+                <h2 class="font-ocr"><strong>Properties of Collider</strong></h2>
                 The Collider contract contains <code>F</code>, <code>G</code>, <code>F<sup>†</sup></code> and
                 <code>G<sup>†</sup></code>, and these operators vary with each use-case, since each use-case has a unique inherent
                 economy. There are in fact several possible choices of <code>F</code>, <code>G</code>, <code>F<sup>†</sup></code>
@@ -181,8 +181,8 @@
                 <blockquote>
                     <p>Note that each Collider is a unique contract and each set of emitted <code>$BARYON</code> and <code>$PHOTON</code> tokens are unique; a notation of <code>$BARYON<sub>k</sub></code> and <code>$PHOTON<sub>k</sub></code> is more appropriate.</p>
                 </blockquote>
-                <h2><strong>Domain-specific Use-cases</strong></h2>
-                <h3><strong>Prediction Markets</strong></h3>
+                <h2 class="font-ocr"><strong>Domain-specific Use-cases</strong></h2>
+                <h3 class="font-ocr"><strong>Prediction Markets</strong></h3>
                 Prediction markets are among the simplest applications of entangled tokenomics. The inherent duality in all
                 decision-making is encoded in the core topology of <code>$ANTI</code> and <code>$PRO</code> tokenomics. This
                 explicit duality not only enables more precise and pointed predictions but also allows for quantifiable measures
@@ -225,7 +225,7 @@
                 deposited and the inherent mathematical properties of the operations, rather than being influenced by the context
                 or framing of the question. Such independence highlights the neutrality of the Collider's mechanism, allowing the
                 outcomes to be determined solely by the quantitative inputs and the predefined rules of the system.
-                <h4><strong>THE EQUALISER</strong></h4>
+                <h4 class="font-ocr"><strong>THE EQUALISER</strong></h4>
                 <p>
                     The Equaliser is a separate contract designed to handle the redistribution of tokens in scenarios where
                     such redistribution is a desired feature. One prominent use case is prediction markets, where redistribution is
@@ -249,17 +249,17 @@
                 </p>
                 <img width="1000" src="/assets/whitepaper/prediction-markets.png" />
                 <p align="center">Figure 3: Prediction Markets</p>
-                <h3><strong>Decentralised Science</strong></h3>
+                <h3 class="font-ocr"><strong>Decentralised Science</strong></h3>
                 <p>
                     DeSci (Decentralised Science) is another domain where <code>$ANTI</code> and <code>$PRO</code> tokens can be utilised in various settings. These tokens can be employed to programmatically fund DeSci projects, where project outcomes are encoded from their raw form into a numerical range through appropriate mapping. Alternatively, emitted tokens can serve as a market for citizen science resources, such as distributed computing. Below are two illustrative examples:
                 </p>
-                <h4><strong>Funding Scientific Trust</strong></h4>
+                <h4 class="font-ocr"><strong>Funding Scientific Trust</strong></h4>
                 <p>
                     Consider a scenario where Alice is interested in funding a DeSci project that aims to determine the efficacy of a pharmaceutical product, "Drug X." Alice funds the research by depositing <code>$ANTI</code> and <code>$PRO</code> tokens in a proportion she deems appropriate, based on her assessment of the project's likelihood of success. In this case, the Equaliser contract is unnecessary since no outcome-based redistribution in intended; however, alternative methods must exist to ensure the emitted tokens are effectively utilised. The <code>$BARYON</code> tokens (representing Alice's trust in the outcome) are directly used to fund the project on which Alice has voted, while the <code>$PHOTON</code> tokens (representing her uncertainty about the outcome) are released into her personal wallet. Alice can then choose to expose the <code>$PHOTON</code> tokens to the market via selling, lending, staking etc or retain them. If the project succeeds, the market value of both <code>$BARYON</code> and <code>$PHOTON</code> tokens is likely to increase. Alice can then decide whether to sell her <code>$PHOTON</code> tokens for profit or acquire additional <code>$BARYON</code> tokens from the market to tunnel the dual pair back into <code>$ANTI</code> and <code>$PRO</code> tokens. Note that it is also possible for the token prices to decrease upon success due to external influences, such as the internal proceedings - including but not limited to the tokenomics - of the DeSci project in question. The market-making model in this case must be carefully designed to prevent any leakage of monetary value during token dispersion after emission, irrespective of the direction or magnitude of the price movement of the token pair.
                 </p>
                 <img width="1000" src="/assets/whitepaper/desci-funding.png" />
                 <p align="center">Figure 4: Funding Decentralised Science</p>
-                <h4><strong>Distributed Crow-sourcing</strong></h4>
+                <h4 class="font-ocr"><strong>Distributed Crowd-sourcing</strong></h4>
                 <p>
                     The application of these tokens in distributed volunteer computing is both significant and intuitive. For instance, Bob has idle devices he wishes to rent out for projects requiring high-throughput parallel computing. Through programmes such as BOINC, Bob can lend his computing resources and earn <code>$BARYON</code> and <code>$PHOTON</code> tokens as rewards. Bob can subsequently tunnel these tokens back into <code>$ANTI</code> and <code>$PRO</code>, or sell them in the local market to others seeking computing resources. Alternatively, if Bob required computing resources himself, he would deposit <code>$ANTI</code> and <code>$PRO</code> tokens in appropriate proportions to emit <code>$BARYON</code> and <code>$PHOTON</code> tokens, which he could then use to purchase compute resources from the local market. In this example, the <code>$BARYON<sub>k</sub></code> and <code>$PHOTON<sub>k</sub></code> tokens are typically degenerate (although this is a flexible property and can be broken), holding equal value. This straightforward application demonstrates pronounced flexibility in how the tokens can alternate between markets and utilities.
                 </p>
@@ -271,7 +271,7 @@
                 </p>
                 <img width="1000" src="/assets/whitepaper/desci-sourcing.png" />
                 <p align="center">Figure 5: Science Resources Marketplace</p>
-                <h3><strong>Conclusion</strong></h3>
+                <h3 class="font-ocr"><strong>Conclusion</strong></h3>
                 In conclusion, the <code>$ANTI</code>-<code>$PRO</code> token ecosystem presents a pioneering approach to decentralised market-making, blending deterministic and probabilistic dynamics to address limitations in traditional automated market-making systems. By embedding dualities and leveraging entangled behaviours, the system enables nuanced applications across domains, from prediction markets to decentralised science (DeSci). The introduction of the Collider contract and its transformative operations adds layers of complexity and flexibility, allowing the creation of bespoke markets with features tailored to specific needs.
                 <br></br>
                 The use of <code>$BARYON</code> and <code>$PHOTON</code> tokens to encode trust and uncertainty, respectively, highlights the system's adaptability. In DeSci, this translates into streamlined funding models and resource distribution mechanisms, while in prediction markets, the Equaliser ensures proportional reward redistribution based on accuracy. The architecture also mirrors quantum mechanical principles, ensuring completeness and reversibility in token transformations — a key innovation that preserves systemic integrity.

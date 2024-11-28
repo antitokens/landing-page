@@ -18,7 +18,7 @@ async function updateTokenData() {
         if (antiData.pairs && antiData.pairs[0]) {
             const antiPair = antiData.pairs[0];
             document.getElementById('anti-price').textContent = 
-                `$${parseFloat(antiPair.priceUsd).toFixed(6)}`;
+                `$${parseFloat(antiPair.priceUsd).toFixed(5)}`;
             document.getElementById('anti-mcap').textContent = 
                 `$${formatMarketCap(antiPair.fdv)}`;
         }
@@ -27,7 +27,7 @@ async function updateTokenData() {
         if (proData.pairs && proData.pairs[0]) {
             const proPair = proData.pairs[0];
             document.getElementById('pro-price').textContent = 
-                `$${parseFloat(proPair.priceUsd).toFixed(6)}`;
+                `$${parseFloat(proPair.priceUsd).toFixed(5)}`;
             document.getElementById('pro-mcap').textContent = 
                 `$${formatMarketCap(proPair.fdv)}`;
         }

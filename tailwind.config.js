@@ -16,6 +16,7 @@ export default {
         'grotesk': ['Space Grotesk', 'sans-serif'],
         'outfit': ['Outfit', 'sans-serif'],
         'ocr': ['OCR A Std', 'monospace'],
+        'sfmono': ['SF Mono Round', 'monospace'],
       },
       typography: {
         DEFAULT: {
