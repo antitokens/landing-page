@@ -8,7 +8,7 @@ const template = `
                     <p class="text-gray-400">Quantum-inspired token pair for the future of DeSci</p>
                 </div>
                 <div>
-                    <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+                    <h3 class="text-lg font-semibold mb-4 text-gray-300">Quick Links</h3>
                     <div class="space-y-2">
                         <a href="#benefits" class="block text-gray-400 hover:text-accent-primary transition-colors">Benefits</a>
                         <a href="/whitepaper/" class="block text-gray-400 hover:text-accent-primary transition-colors">Whitepaper</a>
@@ -16,7 +16,7 @@ const template = `
                     </div>
                 </div>
                 <div>
-                    <h3 class="text-lg font-semibold mb-4">Community</h3>
+                    <h3 class="text-lg font-semibold mb-4 text-gray-300">Community</h3>
                     <div class="space-y-2">
                         <a href="https://x.com/antitokens" target="_blank" class="flex items-center gap-2 block text-gray-400 hover:text-accent-primary transition-colors">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" fill="rgba(255,255,255,1)"><path d="M17.6874 3.0625L12.6907 8.77425L8.37045 3.0625H2.11328L9.58961 12.8387L2.50378 20.9375H5.53795L11.0068 14.6886L15.7863 20.9375H21.8885L14.095 10.6342L20.7198 3.0625H17.6874ZM16.6232 19.1225L5.65436 4.78217H7.45745L18.3034 19.1225H16.6232Z"></path></svg>
@@ -29,7 +29,7 @@ const template = `
                     </div>
                 </div>
                 <div>
-                    <h3 class="text-lg font-semibold mb-4">Legal</h3>
+                    <h3 class="text-lg font-semibold mb-4 text-gray-300">Legal</h3>
                     <div class="space-y-2">
                         <a href="#" class="block text-gray-400 hover:text-accent-primary transition-colors">Privacy Policy</a>
                         <a href="#" class="block text-gray-400 hover:text-accent-primary transition-colors">Terms of Service</a>

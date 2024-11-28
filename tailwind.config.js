@@ -8,9 +8,9 @@ export default {
       colors: {
         'dark': '#080808',
         'dark-card': 'rgba(20, 20, 20, 1)',
-        'accent-primary': '#FF4500',    // Orange-red from logo
-        'accent-secondary': '#00FF66',  // Bright green from logo
-        'accent-orange': '#FFA500',     // Mid orange for gradient steps
+        'accent-primary': '#D13800',
+        'accent-secondary': '#00CC8E',
+        'accent-orange': '#D66035',
       },
       fontFamily: {
         'grotesk': ['Space Grotesk', 'sans-serif'],

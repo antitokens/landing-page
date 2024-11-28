@@ -9,7 +9,7 @@ const template = `
                     </svg>
                 </button>
                 <div class="hidden md:block logo">
-                    <a href="/" class="text-gray-300 text-3xl font-semibold font-outfit">antitoken</a>
+                    <a href="/" class="text-3xl font-semibold font-outfit text-gray-300">antitoken</a>
                 </div>
             </div>
 
@@ -31,7 +31,7 @@ const template = `
             <div class="justify-self-end relative">
                 <!-- Buy Tokens Button (Desktop) -->
                 <div class="hidden md:block relative">
-                    <button class="buy-tokens-button bg-accent-primary hover:opacity-90 text-white px-6 py-2 rounded-lg" id="desktop-buy-button">
+                    <button class="buy-tokens-button bg-accent-primary hover:opacity-90 text-gray-300 px-6 py-2 rounded-lg" id="desktop-buy-button">
                         Buy Tokens
                     </button>
                 </div>
