@@ -17,13 +17,14 @@ const template = `
             <div class="justify-self-center w-full">
                 <!-- Mobile Logo -->
                 <div class="md:hidden logo flex justify-center">
-                    <a href="/" class="text-3xl font-semibold font-ocr bg-gradient-to-r">Antitoken</a>
+                    <a href="/" class="text-3xl font-semibold font-ocr bg-gradient-to-r from-accent-primary from-0% to-accent-secondary to-100% bg-clip-text text-transparent">Antitoken</a>
                 </div>
                 <!-- Desktop Navigation -->
                 <div class="nav-links hidden md:flex justify-center space-x-8">
-                    <a href="#benefits" class="text-gray-300 hover:text-accent-primary transition-colors">Features</a>
                     <a href="/whitepaper/" class="text-gray-300 hover:text-accent-primary transition-colors">Whitepaper</a>
-                    <a href="#faq" class="text-gray-300 hover:text-accent-primary transition-colors">FAQ</a>
+                    <a href="/#benefits" class="text-gray-300 hover:text-accent-primary transition-colors">Features</a>
+                    <a href="/#faq" class="text-gray-300 hover:text-accent-primary transition-colors">FAQs</a>
+                    <a href="https://forum.antitoken.pro" target="_blank" class="text-gray-300 hover:text-accent-primary transition-colors">Forum</a>
                 </div>
             </div>
 
@@ -47,9 +48,10 @@ const template = `
         <!-- Mobile Menu -->
         <div class="md:hidden hidden" id="mobile-menu">
             <div class="px-4 py-3 space-y-4 bg-dark-card/90 border-b border-gray-800/50">
-                <a href="#benefits" class="block text-gray-300 hover:text-accent-primary transition-colors">Features</a>
                 <a href="/whitepaper/" class="block text-gray-300 hover:text-accent-primary transition-colors">Whitepaper</a>
-                <a href="#faq" class="block text-gray-300 hover:text-accent-primary transition-colors">FAQ</a>
+                <a href="/#benefits" class="block text-gray-300 hover:text-accent-primary transition-colors">Features</a>
+                <a href="/#faq" class="block text-gray-300 hover:text-accent-primary transition-colors">FAQ</a>
+                <a href="https://forum.antitoken.pro" target="_blank" class="block text-gray-300 hover:text-accent-primary transition-colors">Forum</a>
             </div>
         </div>
     </nav>
@@ -62,6 +64,20 @@ export class Navbar extends HTMLElement {
 
     async connectedCallback() {
         this.innerHTML = template;
+
+        const mobileMenuButton = this.querySelector('#mobile-menu-button');
+        const mobileMenu = this.querySelector('#mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close menu when clicking a link
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
     }
 }
 
