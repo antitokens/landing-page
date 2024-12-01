@@ -24,7 +24,19 @@ const template = `
                     <a href="/whitepaper/" class="text-gray-300 hover:text-accent-primary transition-colors">Whitepaper</a>
                     <a href="/#benefits" class="text-gray-300 hover:text-accent-primary transition-colors">Features</a>
                     <a href="/#faq" class="text-gray-300 hover:text-accent-primary transition-colors">FAQs</a>
-                    <a href="https://forum.antitoken.pro" target="_blank" class="text-gray-300 hover:text-accent-primary transition-colors">Forum</a>
+                    <div class="relative">
+                        <button class="text-gray-300 hover:text-accent-primary transition-colors flex items-center" id="desktop-community-button">
+                            Community
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1 transition-transform" id="desktop-community-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                            </svg>
+                        </button>
+                        <div class="absolute hidden w-48 bg-dark-card/90 border border-gray-800/50 rounded-lg mt-2" id="desktop-community-content">
+                            <a href="https://twitter.com/antitoken" target="_blank" class="block px-4 py-2 text-gray-300 hover:text-accent-primary hover:bg-gray-800/30">X/Twitter</a>
+                            <a href="https://t.me/antitoken" target="_blank" class="block px-4 py-2 text-gray-300 hover:text-accent-primary hover:bg-gray-800/30">Telegram</a>
+                            <a href="https://forum.antitoken.pro" target="_blank" class="block px-4 py-2 text-gray-300 hover:text-accent-primary hover:bg-gray-800/30">Forum</a>
+                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -51,7 +63,19 @@ const template = `
                 <a href="/whitepaper/" class="block text-gray-300 hover:text-accent-primary transition-colors">Whitepaper</a>
                 <a href="/#benefits" class="block text-gray-300 hover:text-accent-primary transition-colors">Features</a>
                 <a href="/#faq" class="block text-gray-300 hover:text-accent-primary transition-colors">FAQ</a>
-                <a href="https://forum.antitoken.pro" target="_blank" class="block text-gray-300 hover:text-accent-primary transition-colors">Forum</a>
+                <div class="space-y-2">
+                    <button class="text-gray-300 w-full flex justify-between items-center" id="mobile-community-button">
+                        <span>Community</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 transition-transform" id="mobile-community-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
+                    <div class="space-y-2 pl-4 border-l border-gray-700 hidden" id="mobile-community-content">
+                        <a href="https://twitter.com/antitoken" target="_blank" class="block text-gray-300 hover:text-accent-primary transition-colors">X/Twitter</a>
+                        <a href="https://t.me/antitoken" target="_blank" class="block text-gray-300 hover:text-accent-primary transition-colors">Telegram</a>
+                        <a href="https://forum.antitoken.pro" target="_blank" class="block text-gray-300 hover:text-accent-primary transition-colors">Forum</a>
+                    </div>
+                </div>
             </div>
         </div>
     </nav>
@@ -67,16 +91,49 @@ export class Navbar extends HTMLElement {
 
         const mobileMenuButton = this.querySelector('#mobile-menu-button');
         const mobileMenu = this.querySelector('#mobile-menu');
+        const mobileCommunityButton = this.querySelector('#mobile-community-button');
+        const mobileCommunityContent = this.querySelector('#mobile-community-content');
+        const mobileCommunityIcon = this.querySelector('#mobile-community-icon');
+        const desktopCommunityButton = this.querySelector('#desktop-community-button');
+        const desktopCommunityContent = this.querySelector('#desktop-community-content');
+        const desktopCommunityIcon = this.querySelector('#desktop-community-icon');
 
         mobileMenuButton.addEventListener('click', () => {
             mobileMenu.classList.toggle('hidden');
         });
 
-        // Close menu when clicking a link
-        mobileMenu.querySelectorAll('a').forEach(link => {
+        mobileCommunityButton.addEventListener('click', () => {
+            mobileCommunityContent.classList.toggle('hidden');
+            mobileCommunityIcon.style.transform = mobileCommunityContent.classList.contains('hidden') ? 'rotate(0deg)' : 'rotate(180deg)';
+        });
+
+        // Close menu when clicking a link (excluding community dropdown)
+        mobileMenu.querySelectorAll('a:not(#mobile-community-content a)').forEach(link => {
             link.addEventListener('click', () => {
                 mobileMenu.classList.add('hidden');
             });
+        });
+
+        // For community links, only close the main menu
+        mobileCommunityContent.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Desktop community dropdown
+        desktopCommunityButton.addEventListener('click', (e) => {
+            e.stopPropagation();
+            desktopCommunityContent.classList.toggle('hidden');
+            desktopCommunityIcon.style.transform = desktopCommunityContent.classList.contains('hidden') ? 'rotate(0deg)' : 'rotate(180deg)';
+        });
+
+        // Close dropdown when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!desktopCommunityContent.contains(e.target) && !desktopCommunityButton.contains(e.target)) {
+                desktopCommunityContent.classList.add('hidden');
+                desktopCommunityIcon.style.transform = 'rotate(0deg)';
+            }
         });
     }
 }
