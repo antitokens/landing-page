@@ -18,7 +18,7 @@
 }
 @font-face {
     font-family: 'OCR A Std';
-    src: url('/fonts/OCR-A-Std.woff') format('woff');
+    src: url('/fonts/OCR-A-Std.woff2') format('woff2');
     font-style: normal;
     font-display: swap;
 }
