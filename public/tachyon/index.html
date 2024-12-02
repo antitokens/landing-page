@@ -3030,7 +3030,7 @@
       <p>
       The Tachyon tokenomics model introduces a price-difference-based minting mechanism coupled with the Bancor formula for calculating returns. Each swap (during bonding or beyond) through the native liquidity pool on Base incurs a small fee <code>F</code>. The initial claim of Tachyons on the bonding curve collects an additional multipler <code>1 &lt; M &lt; 2</code> based on the claimer's <code>$ANTI</code>-<code>$PRO</code> balance integrated over the lifetime of <code>$ANTI</code>-<code>$PRO</code> token. This is collectively governed by the following equation for total number of Tachyons <code>N<sub>TACHYON</sub></code> released (or refunded) upon each bonding (or unbonding) transaction:
       </p>
-      <pre><code>N<sub>TACHYON</sub> = $<sub>BANCOR</sub> × |𝞭|<sub>T</sub> × (1 - F) × M</code></pre>
+      <pre><code>N<sub>TACHYON</sub> = $<sub>BANCOR</sub> × |𝞭|<sub>T</sub><sup>-1</sup> × (1 - F) × M</code></pre>
       <p>where:</p>
       <ul>
         <li><code>$<sub>BANCOR</sub></code>: The return determined by the Bancor formula (<a href="https://github.com/antitokens/tachyon-contracts" target="_blank">see here for details</a>) as a function of ETH deposited on Base.
