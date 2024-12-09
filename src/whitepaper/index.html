@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Antitoken - Whitepaper</title>
+        <link rel="icon" type="image/png" href="/assets/favicon/favicon-96x96.png" sizes="96x96" />
+        <link rel="icon" type="image/svg+xml" href="/assets/favicon/favicon.svg" />
+        <link rel="shortcut icon" href="/assets/favicon/favicon.ico" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png" />
+        <link rel="manifest" href="/assets/favicon/site.webmanifest" />
+        <script src="whitepaper.js" type="module" defer></script>
+    </head>
+    <body class="bg-dark text-gray-100 relative overflow-x-hidden font-grotesk">
+        <div class="relative max-w-7xl mx-auto px-4">
+            <antitoken-navbar></antitoken-navbar>
+            <article class="mt-40 prose prose-lg prose-invert !max-w-none mb-24 font-sfmono">
+                <h1 class="font-ocr opacity-80 text-4xl">Entangled Quantum-like Tokenomics for DeSci & Prediction Markets</h1>
+                <h5>
+                    Author: <a target="_blank" href="https://sshmatrix.ss.codes/"><code>sshmatrix</code></a> | <a target="_blank" href="https://antitoken.pro"><code>Antitoken</code></a> | quant/acc
+                </h5>
+                <h5>Ping: <a href="mailto:dev@antitoken.pro"><code>dev@antitoken.pro</code></a></h5>
+                <br>
+                <blockquote>
+                    <p>Terms <code>$X</code>, <code>$Y</code> and 'Catalyst' used in previous drafts have been
+                        replaced with <code>$BARYON</code>, <code>$PHOTON</code> and 'Collider' respectively.
+                    </p>
+                </blockquote>
+                <blockquote>
+                    <p>This is a living document and will be updated in real time to match the development of the actual product.</p>
+                </blockquote>
+                <h2 class="font-ocr"><strong>Mission</strong></h2>
+                <p><code>$ANTI</code> and <code>$PRO</code> are an experimental entangled token pair designed to explore new
+                    frontiers in decentralised market-making by introducing a system capable of encoding both predictable and
+                    unpredictable outcomes into its tokenomics. This approach challenges traditional continuous AMMs by employing a
+                    discretised mechanism where market dynamics are shaped by the interaction between the two tokens. Beyond their
+                    memetic origins, <code>$ANTI</code> and <code>$PRO</code> have potential use cases in decentralised science
+                    (DeSci), where such a system could underpin prediction markets for scientific research. By embedding structured
+                    uncertainty and dynamic equilibria into their design, these tokens offer a novel framework for creating markets
+                    that balance stability with probabilistic behavior, enabling a more nuanced approach to decentralised economies.
+                </p>
+                <h2 class="font-ocr"><strong>Technology</strong></h2>
+                The <code>$ANTI</code>-<code>$PRO</code> token pair emerged as a bold experiment in tokenomics, exploring the
+                potential of a system based on entangled market dynamics. Unlike traditional decentralised market-making, which
+                relies on continuous automated market makers (AMMs) in individual pools, <code>$ANTI</code> and <code>$PRO</code>
+                introduced a discretised AMM model where market-making occurs through paired interaction. Launched with an initial
+                issuance of 0.1 SOL split asymmetrically between <code>$ANTI</code> (0.045 SOL) and <code>$PRO</code> (0.055 SOL),
+                this system was designed to inherit a natural <code>Delta</code> (<code>Δ</code>), creating a dynamic from the
+                outset. This asymmetry, combined with the social entanglement of the pair, led to emergent behaviors like parity
+                maintenance and rewards optimised for holding both tokens. Rather than rely solely on theoretical modeling, the
+                project embraced the memetic nature of cryptocurrency markets to test its viability in real-time.
+                To expand the experiment, a custom AMM-like mechanism called the Collider contract will be introduced to bind
+                <code>$ANTI</code> and <code>$PRO</code>, which mints two new tokens: Emission (<code>$BARYON</code>) and Radiation
+                (<code>$PHOTON</code>). Governed by tunable functions <code>F()</code> and <code>G()</code>, these tokens encapsulate
+                different dynamics: Emission is predictable and derived from the sum (N<sub>ANTI</sub> + N<sub>PRO</sub>), while
+                Radiation is probabilistic and reacts to the difference (N<sub>ANTI</sub> - N<sub>PRO</sub>). This combination of
+                deterministic and indeterministic outputs creates an environment of unique market interactions, where equilibria
+                may form dynamically. The introduction of fluidity and randomness in the Radiation token presents an opportunity
+                to observe how markets respond to unpredictable, yet systematically integrated, behaviors.
+                While <code>$ANTI</code> and <code>$PRO</code> began as a memetokenomics experiment, their underlying mechanisms
+                hint at significant potential applications, particularly in decentralised science (DeSci). In DeSci, systems
+                frequently encode dualities, such as consistent and inconsistent components in a hypothesis. The Collider system
+                could model these through Emission and Radiation tokens, enabling prediction markets for scientific validation or
+                exploration. Beyond DeSci, the <code>$ANTI</code>-<code>$PRO</code> ecosystem has potential applications in decentralised
+                organisations, prediction markets, and decentralised financial platforms where opposing yet interconnected forces — such as
+                support vs. dissent or risk vs. reward — can be encoded directly into token mechanics. This whitepaper delves into
+                these use cases and outlines a roadmap for exploring the broader implications of <code>$ANTI</code> and
+                <code>$PRO</code> in decentralised systems.
+                <br></br>
+                <img width="800" src="/assets/whitepaper/schema-minimal.png" />
+                <p align="center">Figure 1: Concept</p>
+                <h2 class="font-ocr"><strong>Quantum Binding</strong></h2>
+                In analogy with fundamental principles in quantum mechanics, the behavior and interactions of <code>$ANTI</code>
+                and <code>$PRO</code> tokens can be modeled using quantum wave functions, denoted as
+                <code>𝜓<sup>ANTI</sup></code> and <code>𝜓<sup>PRO</sup></code> respectively. These wave functions represent the
+                quantised states of the corresponding tokens. The Collider, serving as an operator in this quantum-inspired
+                system, governs the transformation and emission of these tokens by acting on their wave functions.
+                <br></br>
+                The mathematical formalism of these transformations is given by the following forward relations:
+                <br></br>
+                &nbsp;&nbsp;&nbsp;&nbsp;N<sub>X</sub>·𝜓<sup>X</sup> = F(N<sub>ANTI</sub>·𝜓<sup>ANTI</sup> +
+                N<sub>PRO</sub>·𝜓<sup>PRO</sup>), and
+                <br></br>
+                &nbsp;&nbsp;&nbsp;&nbsp;N<sub>Y</sub>·𝜓<sup>Y</sup> = G(N<sub>ANTI</sub>·𝜓<sup>ANTI</sup> -
+                N<sub>PRO</sub>·𝜓<sup>PRO</sup>), <span>(1)</span>
+                <br></br>
+                where <code>N<sub>X</sub></code> and <code>N<sub>Y</sub></code> represent the emitted quantities of
+                <code>$BARYON</code> and <code>$PHOTON</code> tokens, respectively. The <code>F(a)</code> and <code>G(b)</code>
+                denote tunable operations applied to their respective arguments <code>a</code> and <code>b</code>, which
+                encapsulate the combined effects of the deposited wave functions N<sub>ANTI</sub>·𝜓<sup>ANTI</sup> and
+                N<sub>PRO</sub>·𝜓<sup>PRO</sup>. These operations effectively serve as control mechanisms, enabling the Collider
+                to regulate the transformation of deposited tokens into emitted tokens.
+                <br></br>
+                The inverse relations, which describe the process of depositing <code>$BARYON</code> and <code>$PHOTON</code>
+                tokens to release <code>$ANTI</code> and <code>$PRO</code> tokens, are derived as:
+                <br></br>
+                &nbsp;&nbsp;&nbsp;&nbsp;N<sub>ANTI</sub>·𝜓<sup>ANTI</sup> = F<sup>†</sup>(N<sub>X</sub>·𝜓<sup>X</sup>)/2 +
+                G<sup>†</sup>(N<sub>Y</sub>·𝜓<sup>Y</sup>)/2, and
+                <br></br>
+                &nbsp;&nbsp;&nbsp;<span> </span>N<sub>PRO</sub>·𝜓<sup>PRO</sup> =
+                F<sup>†</sup>(N<sub>X</sub>·𝜓<sup>X</sup>)/2 - G<sup>†</sup>(N<sub>Y</sub>·𝜓<sup>Y</sup>)/2. <span>(2)</span>
+                <br></br>
+                Here, <code>F<sup>†</sup></code> and <code>G<sup>†</sup></code> are the respective inverse operations of
+                <code>F</code> and <code>G</code>, providing a means to reverse the transformation and extract the original
+                <code>$ANTI</code> and <code>$PRO</code> wave functions from the emitted tokens.
+                <br></br>
+                This duality of forward and inverse operations forms the basis for the Collider's functionality, enabling both the
+                emission and recovery of tokens. The forward operation requires the deposition of <code>$ANTI</code> and
+                <code>$PRO</code> tokens to emit <code>$BARYON</code> and <code>$PHOTON</code> tokens, while the inverse operation
+                facilitates the reverse process, where depositing <code>$BARYON</code> and <code>$PHOTON</code> tokens results in
+                the release of <code>$ANTI</code> and <code>$PRO</code> tokens. These operations are inherently interconnected and
+                symmetrically defined by the functions <code>F</code>, <code>G</code>, <code>F<sup>†</sup></code> and
+                <code>G<sup>†</sup></code>.
+                The interplay of these operations is best visualised through a Feynman diagram-like schema, as illustrated in
+                Figure 1. In this representation, the Collider is depicted as an interaction vertex where incoming wave functions
+                (tokens) are transformed into outgoing wave functions, encapsulating the quantum-inspired dynamics and control
+                mechanisms governing the token ecosystem.
+                <br></br><br></br>
+                <img width="800" src="/assets/whitepaper/forward-backward.png" /><br></br><br></br>
+                <p align="center">Figure 2: Forward and Inverse Operations</p>
+                <br></br>
+                Forward and inverse operations (1) and (2) can be written in matrix form as follows:
+                <img width="800" src="/assets/whitepaper/matrix-form.png" />
+                <h2 class="font-ocr"><strong>An Example</strong></h2>
+                Let’s work through an example of Alice and Bob interacting with the Collider. Suppose Alice and Bob deposit
+                <strong>15</strong> <code>$ANTI</code> tokens and <strong>10</strong> <code>$PRO</code> tokens into the Collider.
+                The forward operation in the Collider is described by:
+                <br></br>
+                &nbsp;&nbsp;&nbsp;&nbsp;<code>N<sub>X</sub>·𝜓<sup>X</sup> = F(N<sub>ANTI</sub>·𝜓<sup>ANTI</sup> + N<sub>PRO</sub>·𝜓<sup>PRO</sup>)</code>,
+                <br></br>
+                &nbsp;&nbsp;&nbsp;&nbsp;<code>N<sub>Y</sub>·𝜓<sup>Y</sup> = G(N<sub>ANTI</sub>·𝜓<sup>ANTI</sup> - N<sub>PRO</sub>·𝜓<sup>PRO</sup>)</code>.
+                <br></br>
+                Here, <code>N<sub>ANTI</sub> = 15</code> and <code>N<sub>PRO</sub> = 10</code>, and <code>F()</code> and
+                <code>G()</code> are operations that control how the deposited tokens transform into
+                <code>N<sub>X</sub>·𝜓<sup>X</sup></code> and <code>N<sub>Y</sub>·𝜓<sup>Y</sup></code>. In the next step, the
+                deposits are combined:<br></br>
+                &nbsp;&nbsp;&nbsp;&nbsp;<code>N<sub>ANTI</sub>·𝜓<sup>ANTI</sup> + N<sub>PRO</sub>·𝜓<sup>PRO</sup> = 15 𝜓<sup>ANTI</sup> + 10 𝜓<sup>PRO</sup></code>,
+                <br></br>
+                &nbsp;&nbsp;&nbsp;&nbsp;<code>N<sub>ANTI</sub>·𝜓<sup>ANTI</sup> - N<sub>PRO</sub>·𝜓<sup>PRO</sup> = 15 𝜓<sup>ANTI</sup> - 10 𝜓<sup>PRO</sup></code>.
+                <br></br>
+                The Collider processes these using <code>F()</code> and <code>G()</code>:
+                <br></br>
+                &nbsp;&nbsp;&nbsp;&nbsp;<code>N<sub>X</sub>·𝜓<sup>X</sup> = F(15 𝜓<sup>ANTI</sup> + 10 𝜓<sup>PRO</sup>)</code>,
+                <br></br>
+                &nbsp;&nbsp;&nbsp;&nbsp;<code>N<sub>Y</sub>·𝜓<sup>Y</sup> = G(15 𝜓<sup>ANTI</sup> - 10 𝜓<sup>PRO</sup>)</code>.
+                <br></br>
+                After processing, the outputs are calculated as <code>N<sub>X</sub> = 12</code> and
+                <code>N<sub>Y</sub> = 4</code>, indicating that Alice and Bob receive <strong>12</strong> <code>$BARYON</code>
+                tokens and <strong>4</strong> <code>$PHOTON</code> tokens after processing by the Collider's operations.
+                <br></br>
+                If Alice and Bob decide to reverse the process to recover their original tokens, they deposit the
+                <strong>12</strong> <code>$BARYON</code> tokens and <strong>4</strong> <code>$PHOTON</code> tokens back into the
+                Collider. The inverse operations, defined by <code>F<sup>†</sup></code> and <code>G<sup>†</sup></code>, allow the
+                Collider to determine the original deposits. By substituting and simplifying, the calculations confirm that the
+                deposited <strong>12</strong> <code>$BARYON</code> tokens and <strong>4</strong> <code>$PHOTON</code> tokens yield
+                <strong>15</strong> <code>$ANTI</code> tokens and <strong>10</strong> <code>$PRO</code> tokens, successfully
+                restoring the initial amounts deposited by Alice and Bob.
+                <br></br>
+                &nbsp;&nbsp;&nbsp;&nbsp;<code>N<sub>ANTI</sub>·𝜓<sup>ANTI</sup> = F<sup>†</sup>(12 𝜓<sup>X</sup>)/2 + G<sup>†</sup>(4 𝜓<sup>Y</sup>)/2</code>,
+                <br></br>
+                &nbsp;&nbsp;&nbsp;&nbsp;<code>N<sub>PRO</sub>·𝜓<sup>PRO</sup> = F<sup>†</sup>(12 𝜓<sup>X</sup>)/2 - G<sup>†</sup>(4 𝜓<sup>Y</sup>)/2</code>.
+                <br></br>
+                <blockquote>
+                    <p>The true forms of <code>F</code>, <code>G</code>, <code>F<sup>†</sup></code> and <code>G<sup>†</sup></code>
+                        are not provided in this paper, and they will only be revealed in the Collider contract upon deployment.
+                    </p>
+                </blockquote>
+                <h2 class="font-ocr"><strong>Properties of Collider</strong></h2>
+                The Collider contract contains <code>F</code>, <code>G</code>, <code>F<sup>†</sup></code> and
+                <code>G<sup>†</sup></code>, and these operators vary with each use-case, since each use-case has a unique inherent
+                economy. There are in fact several possible choices of <code>F</code>, <code>G</code>, <code>F<sup>†</sup></code>
+                and <code>G<sup>†</sup></code> in the Collider. However, construction of the Collider must follow a conservation
+                principle:
+                <br></br>
+                • Completeness: Forward and inverse operations must be complete, i.e. users must not lose or make any excess
+                tokens by performing a forward and inverse operation consecutively.
+                <br></br>
+                <blockquote>
+                    <p>This part will be expanded once the Collider's exact form in revealed.</p>
+                </blockquote>
+                <blockquote>
+                    <p>Note that each Collider is a unique contract and each set of emitted <code>$BARYON</code> and <code>$PHOTON</code> tokens are unique; a notation of <code>$BARYON<sub>k</sub></code> and <code>$PHOTON<sub>k</sub></code> is more appropriate.</p>
+                </blockquote>
+                <h2 class="font-ocr"><strong>Domain-specific Use-cases</strong></h2>
+                <h3 class="font-ocr"><strong>Prediction Markets</strong></h3>
+                Prediction markets are among the simplest applications of entangled tokenomics. The inherent duality in all
+                decision-making is encoded in the core topology of <code>$ANTI</code> and <code>$PRO</code> tokenomics. This
+                explicit duality not only enables more precise and pointed predictions but also allows for quantifiable measures
+                of uncertainty.
+                <br></br>
+                In this example, we explore how Bob uses the Collider to express his prediction of an event's likelihood and how
+                his holdings are affected when the actual outcome differs. Bob believes there is a <strong>70-30</strong> chance
+                that a particular event will occur, representing his confidence in the event happening versus not happening. To
+                express this belief, Bob deposits <strong>70</strong> <code>$PRO</code> tokens and <strong>30</strong>
+                <code>$ANTI</code> tokens into the Collider. The Collider processes these inputs through its forward operations,
+                which reflect Bob's prediction and uncertainty. The forward transformation combines the deposited tokens, applies
+                the operations <code>F</code> and <code>G</code>, and produces outputs defined by these functions, resulting in
+                the emission of <strong>33</strong> <code>$BARYON</code> tokens and <strong>24</strong> <code>$PHOTON</code>
+                tokens. The significance of these token emissions and the subsequent impact of the actual outcome on Bob's
+                holdings provide a quantitative demonstration of the Collider's functionality.
+                <br></br>
+                Bob interacts with the Collider by depositing <strong>70</strong> <code>$PRO</code> tokens and <strong>30</strong>
+                <code>$ANTI</code> tokens, reflecting his belief in a <strong>70-30</strong> probability of an event occurring.
+                The Collider processes these inputs using its forward operations, resulting in the emission of <strong>33</strong>
+                <code>$BARYON</code> tokens and <strong>24</strong> <code>$PHOTON</code> tokens. The forward transformation
+                combines the deposited tokens, applies the operations <code>F</code> and <code>G</code>, and produces outputs
+                defined by these functions.
+                <br></br>
+                If the final outcome differs from Bob's prediction and the event's inverse occurs with a <strong>60-40</strong>
+                margin, Bob experiences a loss. Specifically, he loses <strong>25</strong> <code>$BARYON</code> tokens and
+                <strong>8</strong> <code>$PHOTON</code> tokens. Bob's loss in <code>$BARYON</code> tokens is significant because
+                he incorrectly predicted the direction of the outcome. However, his loss in <code>$PHOTON</code> tokens is
+                relatively minor, as his prediction of uncertainty was closer to the actual result.
+                <br></br>
+                To reverse the process, Bob can deposit the remaining <strong>8</strong> <code>$BARYON</code> tokens and
+                <strong>16</strong> <code>$PHOTON</code> tokens into the Collider. The inverse operations, defined by
+                <code>F<sup>†</sup></code> and <code>G<sup>†</sup></code>, calculate the corresponding amounts of original tokens.
+                Upon completing the inverse transformation, Bob recovers <strong>35</strong> <code>$PRO</code> tokens and
+                <strong>17</strong> <code>$ANTI</code> tokens, successfully closing the loop and reflecting the updated outcome in
+                his token holdings.
+                <br></br>
+                In the above example, the functions <code>F</code>, <code>G</code>, <code>F<sup>†</sup></code>, and
+                <code>G<sup>†</sup></code> were assumed to be independent of any external influences or biases resulting from the
+                question itself. This ensures that the transformations performed by the Collider are purely based on the tokens
+                deposited and the inherent mathematical properties of the operations, rather than being influenced by the context
+                or framing of the question. Such independence highlights the neutrality of the Collider's mechanism, allowing the
+                outcomes to be determined solely by the quantitative inputs and the predefined rules of the system.
+                <h4 class="font-ocr"><strong>THE EQUALISER</strong></h4>
+                <p>
+                    The Equaliser is a separate contract designed to handle the redistribution of tokens in scenarios where
+                    such redistribution is a desired feature. One prominent use case is prediction markets, where redistribution is
+                    needed as a function of the prediction's proximity to the final truth. In other use cases, such functionality
+                    may not be necessary; for example, in DeSci, redistribution may not be relevant.
+                </p>
+                <p>
+                    In the earlier example, the loss sustained by Bob due to his incorrect prediction is determined by the
+                    Equaliser. The Equaliser operates in a manner analogous to the concept of superposition in quantum
+                    physics. The emitted <code>$BARYON</code> and <code>$PHOTON</code> tokens are tunnelled into the Equaliser,
+                    which then determines the extent of win or loss (<code>Λ</code>) by taking the inner product <code>⟨·,·⟩</code> of the 
+                    predicted probability distribution <code>φ</code> - determined by the deposited <code>$ANTI</code> and 
+                    <code>$PRO</code>, and the actual truth distribution <code>χ</code>, such that 
+                    <br></br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;<code>Λ = ⟨φ,χ⟩/⟨χ,χ⟩</code>. <span>(3)</span>
+                <p>
+                    Since the inner products are contiguous over their domain, the tokens in the Equaliser's pool can be
+                    redistributed among the participants through a straightforward mapping mechanism. This ensures that token redistribution is
+                    proportional to the accuracy of individual predictions while accounting for the collective contribution of all
+                    participants.
+                </p>
+                <img width="1000" src="/assets/whitepaper/prediction-markets.png" />
+                <p align="center">Figure 3: Prediction Markets</p>
+                <h3 class="font-ocr"><strong>Decentralised Science</strong></h3>
+                <p>
+                    DeSci (Decentralised Science) is another domain where <code>$ANTI</code> and <code>$PRO</code> tokens can be utilised in various settings. These tokens can be employed to programmatically fund DeSci projects, where project outcomes are encoded from their raw form into a numerical range through appropriate mapping. Alternatively, emitted tokens can serve as a market for citizen science resources, such as distributed computing. Below are two illustrative examples:
+                </p>
+                <h4 class="font-ocr"><strong>Funding Scientific Trust</strong></h4>
+                <p>
+                    Consider a scenario where Alice is interested in funding a DeSci project that aims to determine the efficacy of a pharmaceutical product, "Drug X." Alice funds the research by depositing <code>$ANTI</code> and <code>$PRO</code> tokens in a proportion she deems appropriate, based on her assessment of the project's likelihood of success. In this case, the Equaliser contract is unnecessary since no outcome-based redistribution in intended; however, alternative methods must exist to ensure the emitted tokens are effectively utilised. The <code>$BARYON</code> tokens (representing Alice's trust in the outcome) are directly used to fund the project on which Alice has voted, while the <code>$PHOTON</code> tokens (representing her uncertainty about the outcome) are released into her personal wallet. Alice can then choose to expose the <code>$PHOTON</code> tokens to the market via selling, lending, staking etc or retain them. If the project succeeds, the market value of both <code>$BARYON</code> and <code>$PHOTON</code> tokens is likely to increase. Alice can then decide whether to sell her <code>$PHOTON</code> tokens for profit or acquire additional <code>$BARYON</code> tokens from the market to tunnel the dual pair back into <code>$ANTI</code> and <code>$PRO</code> tokens. Note that it is also possible for the token prices to decrease upon success due to external influences, such as the internal proceedings - including but not limited to the tokenomics - of the DeSci project in question. The market-making model in this case must be carefully designed to prevent any leakage of monetary value during token dispersion after emission, irrespective of the direction or magnitude of the price movement of the token pair.
+                </p>
+                <img width="1000" src="/assets/whitepaper/desci-funding.png" />
+                <p align="center">Figure 4: Funding Decentralised Science</p>
+                <h4 class="font-ocr"><strong>Distributed Crowd-sourcing</strong></h4>
+                <p>
+                    The application of these tokens in distributed volunteer computing is both significant and intuitive. For instance, Bob has idle devices he wishes to rent out for projects requiring high-throughput parallel computing. Through programmes such as BOINC, Bob can lend his computing resources and earn <code>$BARYON</code> and <code>$PHOTON</code> tokens as rewards. Bob can subsequently tunnel these tokens back into <code>$ANTI</code> and <code>$PRO</code>, or sell them in the local market to others seeking computing resources. Alternatively, if Bob required computing resources himself, he would deposit <code>$ANTI</code> and <code>$PRO</code> tokens in appropriate proportions to emit <code>$BARYON</code> and <code>$PHOTON</code> tokens, which he could then use to purchase compute resources from the local market. In this example, the <code>$BARYON<sub>k</sub></code> and <code>$PHOTON<sub>k</sub></code> tokens are typically degenerate (although this is a flexible property and can be broken), holding equal value. This straightforward application demonstrates pronounced flexibility in how the tokens can alternate between markets and utilities.
+                </p>
+                <blockquote>
+                    <p>Local market in this case refers to the <code>$BARYON<sub>k</sub></code> and <code>$PHOTON<sub>k</sub></code> pairs. 'Degenerate' refers to the state where <code>$BARYON<sub>k</sub></code> and <code>$PHOTON<sub>k</sub></code> have indistinguishable properties.</p>
+                </blockquote>
+                <p>
+                    The applications of <code>$ANTI</code> and <code>$PRO</code> tokens in DeSci are vast, although their human interfaces are still under development to ensure completeness and usability. In both examples, it is worth noting that the local market for each use-case is determined by the emitted <code>$BARYON</code> and <code>$PHOTON</code> tokens, while the <code>$ANTI</code> and <code>$PRO</code> tokens remain within a global market independent of specific contexts or use-cases. Detailed technical specifications for the examples provided will be included in the forthcoming yellow paper.
+                </p>
+                <img width="1000" src="/assets/whitepaper/desci-sourcing.png" />
+                <p align="center">Figure 5: Science Resources Marketplace</p>
+                <h3 class="font-ocr"><strong>Conclusion</strong></h3>
+                In conclusion, the <code>$ANTI</code>-<code>$PRO</code> token ecosystem presents a pioneering approach to decentralised market-making, blending deterministic and probabilistic dynamics to address limitations in traditional automated market-making systems. By embedding dualities and leveraging entangled behaviours, the system enables nuanced applications across domains, from prediction markets to decentralised science (DeSci). The introduction of the Collider contract and its transformative operations adds layers of complexity and flexibility, allowing the creation of bespoke markets with features tailored to specific needs.
+                <br></br>
+                The use of <code>$BARYON</code> and <code>$PHOTON</code> tokens to encode trust and uncertainty, respectively, highlights the system's adaptability. In DeSci, this translates into streamlined funding models and resource distribution mechanisms, while in prediction markets, the Equaliser ensures proportional reward redistribution based on accuracy. The architecture also mirrors quantum mechanical principles, ensuring completeness and reversibility in token transformations — a key innovation that preserves systemic integrity.
+                <br></br>
+                As this experimental tokenomics model matures, its potential applications could extend to other decentralised financial systems, governance frameworks, and resource-sharing networks, fostering innovation in markets that demand both stability and adaptability. While still in development, the system’s human interfaces and technical specifics promise to make this groundbreaking framework more accessible and applicable across a wide array of use cases.
+                <img width="1000" src="/assets/whitepaper/collective.png" />
+                <p align="center">Figure 6: The Antitoken Collective</p>
+                Further details on implementation, along with a deeper exploration of the mathematical foundations, will be presented in the upcoming yellow paper, paving the way for new standards in decentralised economic systems.   
+            </article>
+        </div>
+        <antitoken-footer></antitoken-footer>
+    </body>
+</html>
