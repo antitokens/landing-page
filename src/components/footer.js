@@ -10,6 +10,7 @@ const template = `
                 <div>
                     <h3 class="text-lg font-semibold mb-4 text-gray-300">Quick Links</h3>
                     <div class="space-y-2">
+                        <a href="https://app.antitoken.pro" target="_blank" class="block text-gray-400 hover:text-accent-primary transition-colors">Prediction</a>
                         <a href="#benefits" class="block text-gray-400 hover:text-accent-primary transition-colors">Features</a>
                         <a href="/whitepaper/" class="block text-gray-400 hover:text-accent-primary transition-colors">Whitepaper</a>
                         <a href="#faq" class="block text-gray-400 hover:text-accent-primary transition-colors">FAQ</a>

@@ -58,15 +58,23 @@
                     <h1 class="tracking-tight text-4xl md:text-5xl lg:text-6xl mb-12 text-gray-300/90 font-semibold font-outfit">
                         Quantum-inspired Token Pair for DeSci & Prediction Markets
                     </h1>
-                    <p class="font-open font-medium text-xl md:text-[1.35rem] text-gray-300 mb-12 md:mb-24">
+                    <p class="font-open font-medium text-xl md:text-[1.35rem] text-gray-300">
                         Experience the future of entangled token pair market making with
                         <span class="text-accent-primary font-semibold">$ANTI</span>
                         and
                         <span class="text-accent-secondary font-semibold">$PRO</span>
                         tokens
                     </p>
+                    <div class="flex gap-4 mt-12">
+                      <a class="bg-accent-primary hover:opacity-90 text-gray-300 px-6 py-4 md:text-lg md:px-12 rounded-lg" href="https://app.antitoken.pro" target="_blank">
+                          Launch App
+                      </a>
+                      <button class="buy-tokens-button border border-accent-primary hover:opacity-90 text-accent-primary px-6 py-4 md:text-lg md:px-12 rounded-lg" id="desktop-buy-button">
+                          Buy Tokens
+                      </button>
+                    </div>
                     <!-- Stats grid -->
-                    <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mt-12 md:mt-24">
                         <a href="https://dexscreener.com/solana/HB8KrN7Bb3iLWUPsozp67kS4gxtbA4W5QJX4wKPvpump"
                            target="_blank"
                            class="group relative backdrop-blur-xl bg-dark-card/50 p-6 rounded-xl border border-gray-800/50 hover:bg-dark-card/90 transition-colors cursor-pointer">
@@ -116,24 +124,6 @@
                         class="w-72 h-72 rounded-full object-cover border-4 border-gray-800/50 relative z-10 transition-transform duration-200 ease-out"
                     >
                 </div>
-            </div>
-
-            <div id="scroll-indicator" class="cursor-pointer absolute bottom-8 left-1/2 transform -translate-x-1/2 hidden md:flex flex-col items-center animate-bounce">
-                <span class="text-gray-400 text-sm mb-2">Scroll Down</span>
-                <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    class="h-6 w-6 text-accent-primary"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                >
-                    <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                        d="M19 14l-7 7m0 0l-7-7m7 7V3"
-                    />
-                </svg>
             </div>
         </section>
 
@@ -556,9 +546,14 @@
                     Ready to Get Started?
                 </h2>
                 <p class="text-xl text-gray-300 mb-8">Join the future of decentralised markets</p>
-                <button class="buy-tokens-button bg-accent-primary hover:opacity-90 text-gray-300 px-8 py-3 rounded-lg text-lg font-semibold">
-                    Buy Tokens
-                </button>
+                <div class="flex gap-4 items-center justify-center">
+                    <a class="bg-accent-primary hover:opacity-90 text-gray-300 px-6 py-4 text-sm md:text-lg md:px-12 md:text-lg text-nowrap rounded-lg" href="https://app.antitoken.pro" target="_blank">
+                        Launch App
+                    </a>
+                    <button class="buy-tokens-button border border-accent-primary hover:opacity-90 text-accent-primary px-6 py-4 text-sm text-nowrap md:text-lg md:px-12 rounded-lg" id="desktop-buy-button">
+                        Buy Tokens
+                    </button>
+                </div>
             </div>
         </section>
     </div>

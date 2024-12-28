@@ -8,14 +8,14 @@ const template = `
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
                 </svg>
             </button>
-            
+
             <h3 class="text-2xl font-bold text-gray-300 mb-4">Buy Tokens</h3>
             <p class="text-gray-400 mb-6">Choose a token to purchase:</p>
             <div class="space-y-4">
-                <a target="_blank" href="https://raydium.io/swap/?inputMint=sol&outputMint=HB8KrN7Bb3iLWUPsozp67kS4gxtbA4W5QJX4wKPvpump" class="block text-center bg-accent-primary/80 hover:bg-accent-primary/90 text-white px-6 py-3 rounded-lg">
+                <a target="_blank" href="https://raydium.io/swap/?inputMint=sol&outputMint=HB8KrN7Bb3iLWUPsozp67kS4gxtbA4W5QJX4wKPvpump" class="block text-center bg-accent-primary hover:bg-accent-primary/90 text-white px-6 py-3 rounded-lg">
                     Buy <span class="font-bold text-lg">$ANTI</span> Token
                 </a>
-                <a target="_blank" href="https://raydium.io/swap/?inputMint=sol&outputMint=CWFa2nxUMf5d1WwKtG9FS9kjUKGwKXWSjH8hFdWspump" class="block text-center bg-accent-secondary/70 hover:bg-accent-secondary/80 text-white px-6 py-3 rounded-lg">
+                <a target="_blank" href="https://raydium.io/swap/?inputMint=sol&outputMint=CWFa2nxUMf5d1WwKtG9FS9kjUKGwKXWSjH8hFdWspump" class="block text-center bg-accent-secondary/80 hover:bg-accent-secondary/70 text-white px-6 py-3 rounded-lg">
                     Buy <span class="font-bold text-lg">$PRO</span> Token
                 </a>
             </div>
