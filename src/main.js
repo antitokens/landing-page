@@ -294,10 +294,17 @@ function initRoadmapTimeline() {
     const timelineCards = document.querySelectorAll('.timeline-card');
     const timelineContents = document.querySelectorAll('.timeline-content');
 
-    // Show first content by default
-    timelineContents[0].classList.remove('hidden');
+    // Show Q1 2025 by default
+    const activeTimelineCard = timelineCards[1];
+    activeTimelineCard.querySelector('div').classList.remove('border-gray-800/50');
+    activeTimelineCard.querySelector('div').classList.add('border-accent-primary');
+    activeTimelineCard.querySelector('h3').classList.remove('text-gray-300');
+    activeTimelineCard.querySelector('h3').classList.add('text-accent-primary');
 
-    timelineCards.forEach((card, index) => {
+    const activeTimelineContent = timelineContents[1];
+    activeTimelineContent.classList.remove('hidden');
+
+    for (const [index, card] of timelineCards.entries()) {
         card.addEventListener('click', () => {
             // Hide all contents
             timelineContents.forEach(content => {
@@ -310,18 +317,28 @@ function initRoadmapTimeline() {
             // Update active card styling
             timelineCards.forEach(c => {
                 c.querySelector('div').classList.remove('border-accent-primary');
+                c.querySelector('div').classList.remove('border-green-500');
                 c.querySelector('div').classList.add('border-gray-800/50');
                 c.querySelector('h3').classList.remove('text-accent-primary');
+                c.querySelector('h3').classList.remove('text-green-500/80');
                 c.querySelector('h3').classList.add('text-gray-300');
             });
 
-            // Style active card
-            card.querySelector('div').classList.remove('border-gray-800/50');
-            card.querySelector('div').classList.add('border-accent-primary');
-            card.querySelector('h3').classList.remove('text-gray-300');
-            card.querySelector('h3').classList.add('text-accent-primary');
+            if (index < 1) {
+                // Style completed card when active
+                card.querySelector('div').classList.remove('border-gray-800/50');
+                card.querySelector('div').classList.add('border-green-500');
+                card.querySelector('h3').classList.remove('text-gray-300');
+                card.querySelector('h3').classList.add('text-green-500/80');
+            } else {
+                // Style incomplete cards when active
+                card.querySelector('div').classList.remove('border-gray-800/50');
+                card.querySelector('div').classList.add('border-accent-primary');
+                card.querySelector('h3').classList.remove('text-gray-300');
+                card.querySelector('h3').classList.add('text-accent-primary');
+            }
         });
-    });
+    };
 }
 
 // Initialize when DOM is loaded
