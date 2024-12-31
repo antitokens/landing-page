@@ -17,7 +17,7 @@ const template = `
             <div class="justify-self-center w-full">
                 <!-- Mobile Logo -->
                 <div class="md:hidden logo flex justify-center">
-                    <a href="/" class="text-3xl font-semibold font-ocr bg-gradient-to-r from-accent-primary from-0% to-accent-secondary to-100% bg-clip-text text-transparent">Antitoken</a>
+                    <a href="/" class="text-2xl font-semibold font-ocr bg-gradient-to-r from-accent-primary from-0% to-accent-secondary to-100% bg-clip-text text-transparent">Antitoken</a>
                 </div>
                 <!-- Desktop Navigation -->
                 <div class="nav-links hidden md:flex justify-center space-x-8">
@@ -48,17 +48,11 @@ const template = `
 
             <!-- Right side: Buy Button -->
             <div class="justify-self-end relative">
-                <!-- Buy Tokens Button (Desktop) -->
+                <!-- Launch App Button (Desktop) -->
                 <div class="hidden md:block relative">
-                    <button class="buy-tokens-button bg-accent-primary hover:opacity-90 text-gray-300 px-6 py-2 rounded-lg" id="desktop-buy-button">
-                        Buy Tokens
-                    </button>
-                </div>
-                <!-- Buy Tokens Button (Mobile) -->
-                <div class="md:hidden relative">
-                    <button class="buy-tokens-button bg-accent-primary hover:opacity-90 text-white px-4 py-2 rounded-lg text-sm" id="mobile-buy-button">
-                        Buy
-                    </button>
+                    <a class="bg-accent-primary hover:opacity-90 text-gray-300 px-6 py-3 rounded-lg" href="https://app.antitoken.pro" target="_blank">
+                        Launch App &nbsp; &rarr;
+                    </a>
                 </div>
             </div>
         </div>

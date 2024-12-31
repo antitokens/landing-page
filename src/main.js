@@ -17,18 +17,18 @@ async function updateTokenData() {
         // Update UI for $ANTI
         if (antiData.pairs && antiData.pairs[0]) {
             const antiPair = antiData.pairs[0];
-            document.getElementById('anti-price').textContent = 
+            document.getElementById('anti-price').textContent =
                 `$${parseFloat(antiPair.priceUsd).toFixed(5)}`;
-            document.getElementById('anti-mcap').textContent = 
+            document.getElementById('anti-mcap').textContent =
                 `$${formatMarketCap(antiPair.fdv)}`;
         }
 
         // Update UI for $PRO
         if (proData.pairs && proData.pairs[0]) {
             const proPair = proData.pairs[0];
-            document.getElementById('pro-price').textContent = 
+            document.getElementById('pro-price').textContent =
                 `$${parseFloat(proPair.priceUsd).toFixed(5)}`;
-            document.getElementById('pro-mcap').textContent = 
+            document.getElementById('pro-mcap').textContent =
                 `$${formatMarketCap(proPair.fdv)}`;
         }
 
@@ -132,13 +132,13 @@ class InfiniteMarquee {
 
     createTweetCard(tweet) {
         return `
-            <a href="https://twitter.com/${tweet.username}/status/${tweet.tweetId}" 
-               target="_blank" 
+            <a href="https://twitter.com/${tweet.username}/status/${tweet.tweetId}"
+               target="_blank"
                rel="noopener noreferrer"
                class="py-2 tweet mx-2 backdrop-blur-xl bg-dark-card/50 p-6 rounded-xl border border-gray-800/50 w-[350px] cursor-pointer">
                 <div class="flex items-center mb-4">
-                    <img src="/assets/testimonials/${tweet.username}.jpg" 
-                         alt="Profile" 
+                    <img src="/assets/testimonials/${tweet.username}.jpg"
+                         alt="Profile"
                          class="w-10 h-10 rounded-full mr-3">
                     <div>
                         <div class="font-bold text-sm">${tweet.name}</div>
@@ -154,10 +154,10 @@ class InfiniteMarquee {
         // Create wrapper with inline-flex to ensure single row
         const wrapper = document.createElement('div');
         wrapper.className = 'inline-flex gap-4';
-        
+
         // Add tweets
         wrapper.innerHTML = this.tweets.map(tweet => this.createTweetCard(tweet)).join('');
-        
+
         // Add to container
         this.container.appendChild(wrapper);
 
@@ -169,16 +169,16 @@ class InfiniteMarquee {
         const scroll = () => {
             if (isScrolling) {
                 scrollPos += scrollSpeed;
-                
+
                 // Reset when reaching the end
                 if (scrollPos >= wrapper.offsetWidth - this.container.offsetWidth) {
                     scrollPos = 0;
                 }
-                
+
                 // Apply scroll
                 wrapper.style.transform = `translateX(${-scrollPos}px)`;
             }
-            
+
             animationFrame = requestAnimationFrame(scroll);
         };
 
@@ -211,7 +211,7 @@ function initAccordions() {
             content.style.maxHeight = '0px';
         }
     }
-    
+
     document.querySelectorAll('.accordion-header').forEach(header => {
         header.addEventListener('click', () => {
             const content = header.nextElementSibling;
@@ -265,37 +265,6 @@ function initHero() {
 
     updateTokenData();
     setInterval(updateTokenData, 30000);
-}
-
-function initScrollIndicator() {
-    const scrollIndicator = document.getElementById('scroll-indicator');
-    let lastScrollTop = 0;
-    
-    window.addEventListener('scroll', () => {
-        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-        
-        // Hide indicator after scrolling 100px
-        if (scrollTop > 100) {
-            scrollIndicator.classList.remove('opacity-100');
-            scrollIndicator.classList.add('opacity-0');
-        } else {
-            scrollIndicator.classList.remove('opacity-0');
-            scrollIndicator.classList.add('opacity-100');
-        }
-        
-        lastScrollTop = scrollTop;
-    });
-
-    // Handle click to scroll
-    scrollIndicator.addEventListener('click', () => {
-        const currentPosition = window.pageYOffset || document.documentElement.scrollTop;
-        const targetPosition = currentPosition + 300; // Scroll down by 300px
-
-        window.scrollTo({
-            top: targetPosition,
-            behavior: 'smooth'
-        });
-    });
 }
 
 function initBuyTokensModal() {
@@ -358,7 +327,6 @@ function initRoadmapTimeline() {
 // Initialize when DOM is loaded
 document.addEventListener('DOMContentLoaded', () => {
     initHero();
-    initScrollIndicator();
     initAccordions();
     initMarquee();
     initBuyTokensModal();
