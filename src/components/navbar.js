@@ -50,7 +50,7 @@ const template = `
             <div class="justify-self-end relative">
                 <!-- Launch App Button (Desktop) -->
                 <div class="hidden md:block relative">
-                    <a class="bg-accent-primary hover:opacity-90 text-gray-300 px-6 py-3 rounded-lg" href="https://app.antitoken.pro" target="_blank">
+                    <a class="bg-accent-primary border border-accent-primary hover:bg-dark-card/10 hover:text-accent-primary text-white px-6 py-3 rounded-lg" href="https://app.antitoken.pro" target="_blank">
                         Launch App &nbsp; &rarr;
                     </a>
                 </div>
