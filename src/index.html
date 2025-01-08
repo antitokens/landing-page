@@ -1154,7 +1154,11 @@
           >
               From the Community
           </h2>
-        <div id="tweet-marquee"></div>
+        <div class="relative flex">
+          <div class="hidden sm:block absolute w-12 h-full top-0 left-0 bg-gradient-to-r from-dark to-transparent z-10"></div>
+          <div id="tweet-marquee" class="overflow-hidden"></div>
+          <div class="hidden sm:block absolute w-12 h-full top-0 right-0 bg-gradient-to-l from-dark to-transparent z-10"></div>
+        </div>
       </section>
 
       <!-- CTA Section -->
@@ -1179,7 +1183,7 @@
               Launch App
             </a>
             <button
-              class="buy-tokens-button border border-accent-primary hover:bg-accent-primary/90 hover:text-gray-200 text-accent-primary px-6 py-4 md:text-lg md:px-12 rounded-lg"
+              class="buy-tokens-button border border-accent-primary hover:bg-accent-primary/90 hover:text-gray-200 text-accent-primary px-6 py-4 md:text-lg md:px-12 rounded-lg text-nowrap"
               id="desktop-buy-button"
             >
               Buy Tokens

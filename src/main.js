@@ -74,7 +74,7 @@ class InfiniteMarquee {
             {
                 name: "apewood",
                 username: "apewoodx",
-                text: "I think antitokens is really cool because cool because it becomes effectively infra for DeSci.",
+                text: "I think antitokens is really cool because it becomes effectively infra for DeSci.",
                 tweetId: "1861113489085079902"
             },
             {
@@ -110,7 +110,7 @@ class InfiniteMarquee {
             {
                 name: "apewood",
                 username: "apewoodx",
-                text: "I think antitokens is really cool because cool because it becomes effectively infra for DeSci.",
+                text: "I think antitokens is really cool because it becomes effectively infra for DeSci.",
                 tweetId: "1861113489085079902"
             },
             {
@@ -164,7 +164,6 @@ class InfiniteMarquee {
         let scrollPos = 0;
         const scrollSpeed = 0.4;
         let isScrolling = true;
-        let animationFrame;
 
         const scroll = () => {
             if (isScrolling) {
@@ -179,7 +178,7 @@ class InfiniteMarquee {
                 wrapper.style.transform = `translateX(${-scrollPos}px)`;
             }
 
-            animationFrame = requestAnimationFrame(scroll);
+            requestAnimationFrame(scroll);
         };
 
         // Start scrolling
