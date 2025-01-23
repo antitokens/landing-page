@@ -233,6 +233,8 @@ export class Navbar extends HTMLElement {
       },
     ];
 
+    let activeDropdown = null; // Track the currently active dropdown
+
     dropdowns.forEach(({ button, content, icon }) => {
       const btn = this.querySelector(button);
       const dropdown = this.querySelector(content);
@@ -240,16 +242,30 @@ export class Navbar extends HTMLElement {
 
       btn.addEventListener("click", (e) => {
         e.stopPropagation();
-        dropdown.classList.toggle("hidden");
-        dropdownIcon.style.transform = dropdown.classList.contains("hidden")
+
+        // Close the currently active dropdown if it is not the clicked one
+        if (activeDropdown && activeDropdown.dropdown !== dropdown) {
+          activeDropdown.dropdown.classList.add("hidden");
+          activeDropdown.icon.style.transform = "rotate(0deg)";
+          activeDropdown = null;
+        }
+
+        // Toggle the clicked dropdown
+        const isHidden = dropdown.classList.toggle("hidden");
+        dropdownIcon.style.transform = isHidden
           ? "rotate(0deg)"
           : "rotate(180deg)";
+
+        // Update the activeDropdown variable
+        activeDropdown = isHidden ? null : { dropdown, icon: dropdownIcon };
       });
 
+      // Close the dropdown when clicking outside
       document.addEventListener("click", (e) => {
         if (!dropdown.contains(e.target) && !btn.contains(e.target)) {
           dropdown.classList.add("hidden");
           dropdownIcon.style.transform = "rotate(0deg)";
+          activeDropdown = null; // Reset activeDropdown
         }
       });
     });
